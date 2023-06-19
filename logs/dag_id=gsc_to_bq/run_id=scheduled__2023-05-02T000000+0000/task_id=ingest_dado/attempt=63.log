@@ -1,0 +1,36 @@
+[2023-05-03T22:37:17.830+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [queued]>
+[2023-05-03T22:37:17.843+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [queued]>
+[2023-05-03T22:37:17.844+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T22:37:17.845+0000] {taskinstance.py:1280} INFO - Starting attempt 63 of 63
+[2023-05-03T22:37:17.846+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T22:37:17.896+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): ingest_dado> on 2023-05-02 00:00:00+00:00
+[2023-05-03T22:37:17.905+0000] {standard_task_runner.py:55} INFO - Started process 1856 to run task
+[2023-05-03T22:37:17.911+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'ingest_dado', 'scheduled__2023-05-02T00:00:00+00:00', '--job-id', '700', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmph9kw6l9j']
+[2023-05-03T22:37:17.915+0000] {standard_task_runner.py:83} INFO - Job 700: Subtask ingest_dado
+[2023-05-03T22:37:18.012+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [running]> on host 23a1495f3fb6
+[2023-05-03T22:37:18.093+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=ingest_dado
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=63
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-02T00:00:00+00:00
+[2023-05-03T22:37:18.763+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/gcs_to_bq.py", line 36, in ingest_dados
+    credentials = service_account.Credentials.from_service_account_file(keyfile, scope = ['https://www.googleapis.com/auth/cloud-plataform'])
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/service_account.py", line 244, in from_service_account_file
+    return cls._from_signer_and_info(signer, info, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/service_account.py", line 205, in _from_signer_and_info
+    **kwargs
+TypeError: __init__() got an unexpected keyword argument 'scope'
+[2023-05-03T22:37:18.791+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=gsc_to_bq, task_id=ingest_dado, execution_date=20230502T000000, start_date=20230503T223717, end_date=20230503T223718
+[2023-05-03T22:37:18.812+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 700 for task ingest_dado (__init__() got an unexpected keyword argument 'scope'; 1856)
+[2023-05-03T22:37:18.848+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-05-03T22:37:18.902+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

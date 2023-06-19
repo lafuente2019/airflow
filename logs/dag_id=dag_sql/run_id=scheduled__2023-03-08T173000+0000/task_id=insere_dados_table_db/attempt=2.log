@@ -1,0 +1,44 @@
+[2023-03-08T19:13:04.488+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_sql.insere_dados_table_db scheduled__2023-03-08T17:30:00+00:00 [queued]>
+[2023-03-08T19:13:04.500+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_sql.insere_dados_table_db scheduled__2023-03-08T17:30:00+00:00 [queued]>
+[2023-03-08T19:13:04.501+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-08T19:13:04.505+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2023-03-08T19:13:04.505+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-08T19:13:04.524+0000] {taskinstance.py:1300} INFO - Executing <Task(PostgresOperator): insere_dados_table_db> on 2023-03-08 17:30:00+00:00
+[2023-03-08T19:13:04.530+0000] {standard_task_runner.py:55} INFO - Started process 5810 to run task
+[2023-03-08T19:13:04.534+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_sql', 'insere_dados_table_db', 'scheduled__2023-03-08T17:30:00+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/dag_sql.py', '--cfg-path', '/tmp/tmpzr_jtti4']
+[2023-03-08T19:13:04.535+0000] {standard_task_runner.py:83} INFO - Job 86: Subtask insere_dados_table_db
+[2023-03-08T19:13:04.614+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_sql.insere_dados_table_db scheduled__2023-03-08T17:30:00+00:00 [running]> on host 214d78e4ce30
+[2023-03-08T19:13:04.700+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_sql
+AIRFLOW_CTX_TASK_ID=insere_dados_table_db
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-08T17:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-08T17:30:00+00:00
+[2023-03-08T19:13:04.701+0000] {sql.py:254} INFO - Executing: insert into tb_cliente(name, dt)
+values('Junior Lafuente', CURRENT_DATE())
+[2023-03-08T19:13:04.712+0000] {base.py:73} INFO - Using connection ID 'postgres-***' for task execution.
+[2023-03-08T19:13:04.942+0000] {base.py:73} INFO - Using connection ID 'postgres-***' for task execution.
+[2023-03-08T19:13:05.108+0000] {sql.py:375} INFO - Running statement: insert into tb_cliente(name, dt)
+values('Junior Lafuente', CURRENT_DATE()), parameters: None
+[2023-03-08T19:13:05.134+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 266, in execute
+    **extra_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 349, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 380, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near "("
+LINE 2: values('Junior Lafuente', CURRENT_DATE())
+                                              ^
+
+[2023-03-08T19:13:05.144+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_sql, task_id=insere_dados_table_db, execution_date=20230308T173000, start_date=20230308T191304, end_date=20230308T191305
+[2023-03-08T19:13:05.160+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 86 for task insere_dados_table_db (syntax error at or near "("
+LINE 2: values('Junior Lafuente', CURRENT_DATE())
+                                              ^
+; 5810)
+[2023-03-08T19:13:05.212+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-03-08T19:13:05.231+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

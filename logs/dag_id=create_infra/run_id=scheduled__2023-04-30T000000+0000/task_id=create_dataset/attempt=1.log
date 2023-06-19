@@ -1,0 +1,46 @@
+[2023-05-01T00:49:50.208+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: create_infra.create_dataset scheduled__2023-04-30T00:00:00+00:00 [queued]>
+[2023-05-01T00:49:50.220+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: create_infra.create_dataset scheduled__2023-04-30T00:00:00+00:00 [queued]>
+[2023-05-01T00:49:50.220+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-01T00:49:50.221+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-05-01T00:49:50.222+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-01T00:49:50.237+0000] {taskinstance.py:1300} INFO - Executing <Task(BigQueryCreateEmptyDatasetOperator): create_dataset> on 2023-04-30 00:00:00+00:00
+[2023-05-01T00:49:50.246+0000] {standard_task_runner.py:55} INFO - Started process 23113 to run task
+[2023-05-01T00:49:50.251+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'create_infra', 'create_dataset', 'scheduled__2023-04-30T00:00:00+00:00', '--job-id', '488', '--raw', '--subdir', 'DAGS_FOLDER/create_infra.py', '--cfg-path', '/tmp/tmp8_wyiit3']
+[2023-05-01T00:49:50.254+0000] {standard_task_runner.py:83} INFO - Job 488: Subtask create_dataset
+[2023-05-01T00:49:50.345+0000] {task_command.py:388} INFO - Running <TaskInstance: create_infra.create_dataset scheduled__2023-04-30T00:00:00+00:00 [running]> on host 32f6cac2461e
+[2023-05-01T00:49:50.443+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=create_infra
+AIRFLOW_CTX_TASK_ID=create_dataset
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-30T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-30T00:00:00+00:00
+[2023-05-01T00:49:50.453+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-05-01T00:49:50.462+0000] {bigquery.py:451} INFO - datasetId was not specified in `dataset_reference`. Will use default value vendas.
+[2023-05-01T00:49:50.463+0000] {bigquery.py:451} INFO - projectId was not specified in `dataset_reference`. Will use default value semiotic-joy-379201.
+[2023-05-01T00:49:50.464+0000] {bigquery.py:461} INFO - Creating dataset: vendas in project: semiotic-joy-379201 
+[2023-05-01T00:49:51.483+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 1826, in execute
+    exists_ok=self.exists_ok,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 462, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 463, in create_empty_dataset
+    dataset=dataset, exists_ok=exists_ok
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 639, in create_dataset
+    timeout=timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 782, in _call_api
+    return call()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 288, in retry_wrapped_func
+    on_error=on_error,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.Forbidden: 403 POST https://bigquery.googleapis.com/bigquery/v2/projects/semiotic-joy-379201/datasets?prettyPrint=false: Access Denied: Project semiotic-joy-379201: User does not have bigquery.datasets.create permission in project semiotic-joy-379201.
+[2023-05-01T00:49:51.504+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=create_infra, task_id=create_dataset, execution_date=20230430T000000, start_date=20230501T004950, end_date=20230501T004951
+[2023-05-01T00:49:51.521+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 488 for task create_dataset (403 POST https://bigquery.googleapis.com/bigquery/v2/projects/semiotic-joy-379201/datasets?prettyPrint=false: Access Denied: Project semiotic-joy-379201: User does not have bigquery.datasets.create permission in project semiotic-joy-379201.; 23113)
+[2023-05-01T00:49:51.541+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-05-01T00:49:51.562+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

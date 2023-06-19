@@ -1,0 +1,29 @@
+[2023-03-08T19:44:20.813+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_sql.insere_dados_table_db scheduled__2023-03-08T17:30:00+00:00 [queued]>
+[2023-03-08T19:44:20.826+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_sql.insere_dados_table_db scheduled__2023-03-08T17:30:00+00:00 [queued]>
+[2023-03-08T19:44:20.827+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-08T19:44:20.828+0000] {taskinstance.py:1280} INFO - Starting attempt 4 of 4
+[2023-03-08T19:44:20.828+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-08T19:44:20.851+0000] {taskinstance.py:1300} INFO - Executing <Task(PostgresOperator): insere_dados_table_db> on 2023-03-08 17:30:00+00:00
+[2023-03-08T19:44:20.858+0000] {standard_task_runner.py:55} INFO - Started process 8078 to run task
+[2023-03-08T19:44:20.862+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_sql', 'insere_dados_table_db', 'scheduled__2023-03-08T17:30:00+00:00', '--job-id', '92', '--raw', '--subdir', 'DAGS_FOLDER/dag_sql.py', '--cfg-path', '/tmp/tmpcxp16u__']
+[2023-03-08T19:44:20.863+0000] {standard_task_runner.py:83} INFO - Job 92: Subtask insere_dados_table_db
+[2023-03-08T19:44:20.973+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_sql.insere_dados_table_db scheduled__2023-03-08T17:30:00+00:00 [running]> on host 214d78e4ce30
+[2023-03-08T19:44:21.104+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_sql
+AIRFLOW_CTX_TASK_ID=insere_dados_table_db
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-08T17:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-08T17:30:00+00:00
+[2023-03-08T19:44:21.107+0000] {sql.py:254} INFO - Executing: insert into tb_cliente(name, dt)
+values('Junior Lafuente', CURRENT_DATE)
+[2023-03-08T19:44:21.117+0000] {base.py:73} INFO - Using connection ID 'postgres-***' for task execution.
+[2023-03-08T19:44:21.464+0000] {base.py:73} INFO - Using connection ID 'postgres-***' for task execution.
+[2023-03-08T19:44:21.640+0000] {sql.py:375} INFO - Running statement: insert into tb_cliente(name, dt)
+values('Junior Lafuente', CURRENT_DATE), parameters: None
+[2023-03-08T19:44:21.648+0000] {sql.py:384} INFO - Rows affected: 1
+[2023-03-08T19:44:21.671+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=dag_sql, task_id=insere_dados_table_db, execution_date=20230308T173000, start_date=20230308T194420, end_date=20230308T194421
+[2023-03-08T19:44:21.741+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-08T19:44:21.781+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

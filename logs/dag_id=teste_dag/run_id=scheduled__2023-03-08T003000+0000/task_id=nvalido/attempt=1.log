@@ -1,0 +1,28 @@
+[2023-03-08T02:27:42.961+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: teste_dag.nvalido scheduled__2023-03-08T00:30:00+00:00 [queued]>
+[2023-03-08T02:27:42.996+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: teste_dag.nvalido scheduled__2023-03-08T00:30:00+00:00 [queued]>
+[2023-03-08T02:27:43.004+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-08T02:27:43.007+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-03-08T02:27:43.009+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-08T02:27:43.049+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): nvalido> on 2023-03-08 00:30:00+00:00
+[2023-03-08T02:27:43.058+0000] {standard_task_runner.py:55} INFO - Started process 114 to run task
+[2023-03-08T02:27:43.081+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'teste_dag', 'nvalido', 'scheduled__2023-03-08T00:30:00+00:00', '--job-id', '57', '--raw', '--subdir', 'DAGS_FOLDER/teste_dag.py', '--cfg-path', '/tmp/tmpei3mv1ir']
+[2023-03-08T02:27:43.082+0000] {standard_task_runner.py:83} INFO - Job 57: Subtask nvalido
+[2023-03-08T02:27:43.224+0000] {task_command.py:388} INFO - Running <TaskInstance: teste_dag.nvalido scheduled__2023-03-08T00:30:00+00:00 [running]> on host 7f79bdfefada
+[2023-03-08T02:27:43.510+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=teste_dag
+AIRFLOW_CTX_TASK_ID=nvalido
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-08T00:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-08T00:30:00+00:00
+[2023-03-08T02:27:43.526+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-08T02:27:43.532+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', "echo 'quantidade não ok'"]
+[2023-03-08T02:27:43.577+0000] {subprocess.py:86} INFO - Output:
+[2023-03-08T02:27:43.597+0000] {subprocess.py:93} INFO - quantidade não ok
+[2023-03-08T02:27:43.599+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-08T02:27:43.670+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=teste_dag, task_id=nvalido, execution_date=20230308T003000, start_date=20230308T022742, end_date=20230308T022743
+[2023-03-08T02:27:43.769+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-08T02:27:43.835+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

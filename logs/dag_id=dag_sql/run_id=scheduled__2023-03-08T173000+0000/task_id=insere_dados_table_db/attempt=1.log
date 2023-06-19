@@ -1,0 +1,56 @@
+[2023-03-08T19:10:44.070+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_sql.insere_dados_table_db scheduled__2023-03-08T17:30:00+00:00 [queued]>
+[2023-03-08T19:10:44.084+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_sql.insere_dados_table_db scheduled__2023-03-08T17:30:00+00:00 [queued]>
+[2023-03-08T19:10:44.085+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-08T19:10:44.086+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-03-08T19:10:44.087+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-08T19:10:44.108+0000] {taskinstance.py:1300} INFO - Executing <Task(PostgresOperator): insere_dados_table_db> on 2023-03-08 17:30:00+00:00
+[2023-03-08T19:10:44.115+0000] {standard_task_runner.py:55} INFO - Started process 5646 to run task
+[2023-03-08T19:10:44.119+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_sql', 'insere_dados_table_db', 'scheduled__2023-03-08T17:30:00+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/dag_sql.py', '--cfg-path', '/tmp/tmp1hcfknfj']
+[2023-03-08T19:10:44.120+0000] {standard_task_runner.py:83} INFO - Job 84: Subtask insere_dados_table_db
+[2023-03-08T19:10:44.202+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_sql.insere_dados_table_db scheduled__2023-03-08T17:30:00+00:00 [running]> on host 214d78e4ce30
+[2023-03-08T19:10:44.248+0000] {abstractoperator.py:613} ERROR - Exception rendering Jinja template for task 'insere_dados_table_db', field 'sql'. Template: 'insere_dados_table_db.sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 606, in _do_render_template_fields
+    seen_oids,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 657, in render_template
+    template = jinja_env.get_template(value)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: insere_dados_table_db.sql
+[2023-03-08T19:10:44.250+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1374, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1493, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2115, in render_templates
+    original_task.render_template_fields(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1179, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 75, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 606, in _do_render_template_fields
+    seen_oids,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 657, in render_template
+    template = jinja_env.get_template(value)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: insere_dados_table_db.sql
+[2023-03-08T19:10:44.263+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_sql, task_id=insere_dados_table_db, execution_date=20230308T173000, start_date=20230308T191044, end_date=20230308T191044
+[2023-03-08T19:10:44.282+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 84 for task insere_dados_table_db (insere_dados_table_db.sql; 5646)
+[2023-03-08T19:10:44.295+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-03-08T19:10:44.321+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

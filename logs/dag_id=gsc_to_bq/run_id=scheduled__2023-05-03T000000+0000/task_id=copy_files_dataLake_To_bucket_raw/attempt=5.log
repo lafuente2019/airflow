@@ -1,0 +1,83 @@
+[2023-05-04T19:29:29.575+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gsc_to_bq.copy_files_dataLake_To_bucket_raw scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04T19:29:29.611+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gsc_to_bq.copy_files_dataLake_To_bucket_raw scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04T19:29:29.614+0000] {taskinstance.py:1331} INFO - Starting attempt 5 of 6
+[2023-05-04T19:29:29.691+0000] {taskinstance.py:1350} INFO - Executing <Task(GCSToGCSOperator): copy_files_dataLake_To_bucket_raw> on 2023-05-03 00:00:00+00:00
+[2023-05-04T19:29:29.702+0000] {standard_task_runner.py:57} INFO - Started process 288 to run task
+[2023-05-04T19:29:29.710+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'copy_files_dataLake_To_bucket_raw', 'scheduled__2023-05-03T00:00:00+00:00', '--job-id', '754', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmp2eqts0p6']
+[2023-05-04T19:29:29.715+0000] {standard_task_runner.py:85} INFO - Job 754: Subtask copy_files_dataLake_To_bucket_raw
+[2023-05-04T19:29:30.125+0000] {task_command.py:410} INFO - Running <TaskInstance: gsc_to_bq.copy_files_dataLake_To_bucket_raw scheduled__2023-05-03T00:00:00+00:00 [running]> on host f6f3f54b7bf9
+[2023-05-04T19:29:30.276+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Junior Lafuente' AIRFLOW_CTX_DAG_ID='gsc_to_bq' AIRFLOW_CTX_TASK_ID='copy_files_dataLake_To_bucket_raw' AIRFLOW_CTX_EXECUTION_DATE='2023-05-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-03T00:00:00+00:00'
+[2023-05-04T19:29:30.294+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-05-04T19:29:30.304+0000] {gcs_to_gcs.py:397} INFO - Delimiter ignored because wildcard is in prefix
+[2023-05-04T19:31:50.695+0000] {local_task_job_runner.py:299} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2023-05-04T19:31:50.712+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 288. PIDs of all processes in the group: [288]
+[2023-05-04T19:31:50.715+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 288
+[2023-05-04T19:31:50.718+0000] {taskinstance.py:1540} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-04T19:31:50.760+0000] {taskinstance.py:1847} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/transfers/gcs_to_gcs.py", line 254, in execute
+    self._copy_source_with_wildcard(hook=hook, prefix=prefix)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/transfers/gcs_to_gcs.py", line 399, in _copy_source_with_wildcard
+    objects = hook.list(self.source_bucket, prefix=prefix_, delimiter=delimiter)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/gcs.py", line 726, in list
+    for blob in blobs:
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/page_iterator.py", line 208, in _items_iter
+    for page in self._page_iter(increment=False):
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/page_iterator.py", line 244, in _page_iter
+    page = self._next_page()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/page_iterator.py", line 373, in _next_page
+    response = self._get_next_page_response()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/page_iterator.py", line 433, in _get_next_page_response
+    method=self._HTTP_METHOD, path=self.path, query_params=params
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/_http.py", line 72, in api_request
+    return call()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 288, in retry_wrapped_func
+    on_error=on_error,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 490, in api_request
+    extra_api_info=extra_api_info,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 342, in _make_request
+    method, url, headers, data, target_object, timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 380, in _do_request
+    url=url, method=method, headers=headers, data=data, timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/transport/requests.py", line 545, in request
+    self.credentials.before_request(auth_request, method, url, request_headers)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/credentials.py", line 135, in before_request
+    self.refresh(request)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/service_account.py", line 430, in refresh
+    request, self._token_uri, assertion
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 304, in jwt_grant
+    request, token_uri, body, can_retry=can_retry
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 271, in _token_endpoint_request
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 213, in _token_endpoint_request_no_throw
+    request_succeeded, response_data, retryable_error = _perform_request()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 190, in _perform_request
+    method="POST", url=token_uri, headers=headers, body=body, **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/transport/requests.py", line 194, in __call__
+    method, url, data=body, headers=headers, timeout=timeout, **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 498, in send
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1542, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-05-04T19:31:50.801+0000] {taskinstance.py:1373} INFO - Marking task as UP_FOR_RETRY. dag_id=gsc_to_bq, task_id=copy_files_dataLake_To_bucket_raw, execution_date=20230503T000000, start_date=20230504T192929, end_date=20230504T193150
+[2023-05-04T19:31:50.871+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 754 for task copy_files_dataLake_To_bucket_raw (Task received SIGTERM signal; 288)
+[2023-05-04T19:31:50.949+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=288, status='terminated', exitcode=1, started='19:29:29') (288) terminated with exit code 1

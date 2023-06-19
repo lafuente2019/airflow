@@ -1,0 +1,36 @@
+[2023-05-01T10:53:46.036+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: create_infra.create_table_bq scheduled__2023-04-30T00:00:00+00:00 [queued]>
+[2023-05-01T10:53:46.048+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: create_infra.create_table_bq scheduled__2023-04-30T00:00:00+00:00 [queued]>
+[2023-05-01T10:53:46.048+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-01T10:53:46.049+0000] {taskinstance.py:1280} INFO - Starting attempt 7 of 8
+[2023-05-01T10:53:46.050+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-01T10:53:46.071+0000] {taskinstance.py:1300} INFO - Executing <Task(BigQueryExecuteQueryOperator): create_table_bq> on 2023-04-30 00:00:00+00:00
+[2023-05-01T10:53:46.080+0000] {standard_task_runner.py:55} INFO - Started process 7067 to run task
+[2023-05-01T10:53:46.083+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'create_infra', 'create_table_bq', 'scheduled__2023-04-30T00:00:00+00:00', '--job-id', '573', '--raw', '--subdir', 'DAGS_FOLDER/create_infra.py', '--cfg-path', '/tmp/tmpq2melqsx']
+[2023-05-01T10:53:46.085+0000] {standard_task_runner.py:83} INFO - Job 573: Subtask create_table_bq
+[2023-05-01T10:53:46.156+0000] {task_command.py:388} INFO - Running <TaskInstance: create_infra.create_table_bq scheduled__2023-04-30T00:00:00+00:00 [running]> on host da959356c36a
+[2023-05-01T10:53:46.245+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=create_infra
+AIRFLOW_CTX_TASK_ID=create_table_bq
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-30T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=7
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-30T00:00:00+00:00
+[2023-05-01T10:53:46.246+0000] {bigquery.py:1077} INFO - Executing: create table if not exists venda.tb_vendas(
+    id_marca integer,
+    marca string,
+    id_linha integer,
+    linha string,
+    dt_venda date,
+    qtd_venda integer
+)
+PARTITION BY dt_venda;
+[2023-05-01T10:53:46.254+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-05-01T10:53:46.280+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/providers/google/cloud/hooks/bigquery.py:2051: DeprecationWarning: This method is deprecated. Please use `BigQueryHook.insert_job` method.
+  "This method is deprecated. Please use `BigQueryHook.insert_job` method.", DeprecationWarning
+
+[2023-05-01T10:53:46.331+0000] {bigquery.py:1542} INFO - Inserting job ***_1682938426330958_14b25c1b2f66f3aac19605cda6882f96
+[2023-05-01T10:53:47.877+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=create_infra, task_id=create_table_bq, execution_date=20230430T000000, start_date=20230501T105346, end_date=20230501T105347
+[2023-05-01T10:53:47.906+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-05-01T10:53:47.921+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

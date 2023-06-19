@@ -1,0 +1,28 @@
+[2023-04-27T14:40:03.833+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.copy_files_dataLake_To_bucket_raw scheduled__2023-04-26T00:00:00+00:00 [queued]>
+[2023-04-27T14:40:03.848+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.copy_files_dataLake_To_bucket_raw scheduled__2023-04-26T00:00:00+00:00 [queued]>
+[2023-04-27T14:40:03.849+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-27T14:40:03.851+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 3
+[2023-04-27T14:40:03.851+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-27T14:40:03.869+0000] {taskinstance.py:1300} INFO - Executing <Task(GCSSynchronizeBucketsOperator): copy_files_dataLake_To_bucket_raw> on 2023-04-26 00:00:00+00:00
+[2023-04-27T14:40:03.879+0000] {standard_task_runner.py:55} INFO - Started process 747 to run task
+[2023-04-27T14:40:03.885+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'copy_files_dataLake_To_bucket_raw', 'scheduled__2023-04-26T00:00:00+00:00', '--job-id', '416', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmpch4ga7dy']
+[2023-04-27T14:40:03.888+0000] {standard_task_runner.py:83} INFO - Job 416: Subtask copy_files_dataLake_To_bucket_raw
+[2023-04-27T14:40:04.008+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.copy_files_dataLake_To_bucket_raw scheduled__2023-04-26T00:00:00+00:00 [running]> on host b592efbffeab
+[2023-04-27T14:40:04.264+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=copy_files_dataLake_To_bucket_raw
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-26T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-26T00:00:00+00:00
+[2023-04-27T14:40:04.281+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-04-27T14:40:05.430+0000] {gcs.py:1059} INFO - Planned synchronization. To delete blobs count: 0, to upload blobs count: 0, to rewrite blobs count: 0
+[2023-04-27T14:40:05.431+0000] {gcs.py:1064} INFO - Skipped blobs copying.
+[2023-04-27T14:40:05.432+0000] {gcs.py:1079} INFO - Skipped blobs deleting.
+[2023-04-27T14:40:05.432+0000] {gcs.py:1088} INFO - Skipped blobs overwriting.
+[2023-04-27T14:40:05.433+0000] {gcs.py:1102} INFO - Synchronization finished.
+[2023-04-27T14:40:05.449+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=gsc_to_bq, task_id=copy_files_dataLake_To_bucket_raw, execution_date=20230426T000000, start_date=20230427T144003, end_date=20230427T144005
+[2023-04-27T14:40:05.509+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-04-27T14:40:05.551+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

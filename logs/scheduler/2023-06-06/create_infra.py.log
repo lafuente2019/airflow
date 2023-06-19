@@ -1,0 +1,494 @@
+[2023-06-06T21:19:32.516+0000] {processor.py:153} INFO - Started process (PID=86) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:19:32.574+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:19:32.577+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:19:32.576+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:19:52.942+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:19:53.527+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:19:53.527+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:create_infra
+[2023-06-06T21:19:53.611+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:19:53.611+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:create_infra
+[2023-06-06T21:19:53.708+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:19:53.707+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:create_infra
+[2023-06-06T21:19:53.733+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:19:53.731+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:19:53.814+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:19:53.807+0000] {dag.py:2711} INFO - Creating ORM DAG for create_infra
+[2023-06-06T21:19:53.938+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:19:53.938+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-05T00:00:00+00:00, run_after=2023-06-06T00:00:00+00:00
+[2023-06-06T21:19:54.457+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 21.964 seconds
+[2023-06-06T21:20:25.094+0000] {processor.py:153} INFO - Started process (PID=130) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:20:25.109+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:20:25.112+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:20:25.112+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:20:29.159+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:20:29.306+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:20:29.295+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:20:29.475+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:20:29.475+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-05T00:00:00+00:00, run_after=2023-06-06T00:00:00+00:00
+[2023-06-06T21:20:29.762+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 4.687 seconds
+[2023-06-06T21:21:00.233+0000] {processor.py:153} INFO - Started process (PID=166) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:21:00.239+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:21:00.250+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:21:00.250+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:21:04.101+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:21:04.171+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:21:04.170+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:21:04.258+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:21:04.258+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-05T00:00:00+00:00, run_after=2023-06-06T00:00:00+00:00
+[2023-06-06T21:21:04.334+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 4.118 seconds
+[2023-06-06T21:21:34.905+0000] {processor.py:153} INFO - Started process (PID=202) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:21:35.231+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:21:35.243+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:21:35.242+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:21:40.915+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:21:40.976+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:21:40.975+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:21:41.067+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:21:41.067+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-05T00:00:00+00:00, run_after=2023-06-06T00:00:00+00:00
+[2023-06-06T21:21:41.152+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 6.272 seconds
+[2023-06-06T21:22:11.418+0000] {processor.py:153} INFO - Started process (PID=238) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:22:11.421+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:22:11.423+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:22:11.422+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:22:13.927+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:22:14.027+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:22:14.026+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:22:14.156+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:22:14.155+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-05T00:00:00+00:00, run_after=2023-06-06T00:00:00+00:00
+[2023-06-06T21:22:14.217+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 2.811 seconds
+[2023-06-06T21:22:44.358+0000] {processor.py:153} INFO - Started process (PID=274) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:22:44.360+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:22:44.361+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:22:44.361+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:22:45.619+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:22:45.647+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:22:45.647+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:22:45.693+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:22:45.693+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-05T00:00:00+00:00, run_after=2023-06-06T00:00:00+00:00
+[2023-06-06T21:22:46.068+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.724 seconds
+[2023-06-06T21:23:16.551+0000] {processor.py:153} INFO - Started process (PID=310) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:23:16.559+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:23:16.561+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:23:16.561+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:23:17.751+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:23:17.792+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:23:17.791+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:23:17.829+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:23:17.829+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-05T00:00:00+00:00, run_after=2023-06-06T00:00:00+00:00
+[2023-06-06T21:23:17.856+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.311 seconds
+[2023-06-06T21:23:48.539+0000] {processor.py:153} INFO - Started process (PID=346) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:23:48.553+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:23:48.575+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:23:48.574+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:23:49.959+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:23:49.993+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:23:49.992+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:23:50.031+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:23:50.031+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-05T00:00:00+00:00, run_after=2023-06-06T00:00:00+00:00
+[2023-06-06T21:23:50.077+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.544 seconds
+[2023-06-06T21:24:20.423+0000] {processor.py:153} INFO - Started process (PID=383) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:24:20.426+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:24:20.428+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:24:20.428+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:24:24.437+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:24:24.512+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:24:24.509+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:24:24.609+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:24:24.608+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:24:24.761+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 4.344 seconds
+[2023-06-06T21:24:55.477+0000] {processor.py:153} INFO - Started process (PID=419) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:24:55.478+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:24:55.479+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:24:55.479+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:24:56.529+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:24:56.558+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:24:56.557+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:24:56.598+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:24:56.598+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:24:56.641+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.168 seconds
+[2023-06-06T21:25:27.407+0000] {processor.py:153} INFO - Started process (PID=455) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:25:27.410+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:25:27.412+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:25:27.411+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:25:28.344+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:25:28.381+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:25:28.380+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:25:28.436+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:25:28.436+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:25:28.472+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.072 seconds
+[2023-06-06T21:25:58.629+0000] {processor.py:153} INFO - Started process (PID=500) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:25:58.630+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:25:58.632+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:25:58.632+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:25:59.902+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:25:59.943+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:25:59.943+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:25:59.994+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:25:59.994+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:26:00.085+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.460 seconds
+[2023-06-06T21:26:30.168+0000] {processor.py:153} INFO - Started process (PID=533) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:26:30.169+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:26:30.169+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:26:30.169+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:26:31.695+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:26:31.786+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:26:31.784+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:26:31.938+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:26:31.938+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:26:31.981+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.816 seconds
+[2023-06-06T21:27:02.518+0000] {processor.py:153} INFO - Started process (PID=578) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:27:02.520+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:27:02.521+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:27:02.521+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:27:03.839+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:27:03.879+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:27:03.878+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:27:03.926+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:27:03.926+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:27:03.955+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.442 seconds
+[2023-06-06T21:27:34.393+0000] {processor.py:153} INFO - Started process (PID=614) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:27:34.394+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:27:34.396+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:27:34.396+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:27:35.144+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:27:35.171+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:27:35.170+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:27:35.198+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:27:35.198+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:27:35.228+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.840 seconds
+[2023-06-06T21:28:05.327+0000] {processor.py:153} INFO - Started process (PID=650) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:28:05.331+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:28:05.332+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:28:05.332+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:28:06.234+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:28:06.268+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:28:06.268+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:28:06.305+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:28:06.305+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:28:06.332+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.011 seconds
+[2023-06-06T21:28:36.796+0000] {processor.py:153} INFO - Started process (PID=703) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:28:36.798+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:28:36.800+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:28:36.800+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:28:38.111+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:28:38.136+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:28:38.136+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:28:38.165+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:28:38.164+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:28:38.189+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.407 seconds
+[2023-06-06T21:29:08.699+0000] {processor.py:153} INFO - Started process (PID=741) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:29:08.702+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:29:08.704+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:29:08.704+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:29:10.195+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:29:10.229+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:29:10.228+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:29:10.304+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:29:10.303+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:29:10.343+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.649 seconds
+[2023-06-06T21:29:40.841+0000] {processor.py:153} INFO - Started process (PID=777) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:29:40.843+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:29:40.844+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:29:40.844+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:29:41.799+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:29:41.850+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:29:41.849+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:29:41.902+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:29:41.902+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:29:41.938+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.101 seconds
+[2023-06-06T21:30:12.649+0000] {processor.py:153} INFO - Started process (PID=813) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:30:12.651+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:30:12.654+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:30:12.654+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:30:13.547+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:30:13.571+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:30:13.570+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:30:13.609+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:30:13.609+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:30:13.638+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.996 seconds
+[2023-06-06T21:30:44.404+0000] {processor.py:153} INFO - Started process (PID=866) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:30:44.416+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:30:44.418+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:30:44.418+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:30:46.320+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:30:46.361+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:30:46.360+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:30:46.437+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:30:46.436+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:30:46.498+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 2.100 seconds
+[2023-06-06T21:31:17.062+0000] {processor.py:153} INFO - Started process (PID=902) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:31:17.065+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:31:17.066+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:31:17.066+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:31:17.840+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:31:17.899+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:31:17.898+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:31:17.977+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:31:17.977+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:31:18.018+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.963 seconds
+[2023-06-06T21:31:48.792+0000] {processor.py:153} INFO - Started process (PID=954) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:31:48.794+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:31:48.796+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:31:48.796+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:31:49.818+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:31:49.850+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:31:49.849+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:31:49.881+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:31:49.881+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:31:49.909+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.121 seconds
+[2023-06-06T21:32:20.492+0000] {processor.py:153} INFO - Started process (PID=990) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:32:20.495+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:32:20.496+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:32:20.496+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:32:21.607+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:32:21.646+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:32:21.645+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:32:21.701+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:32:21.701+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:32:21.730+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.241 seconds
+[2023-06-06T21:32:52.170+0000] {processor.py:153} INFO - Started process (PID=1028) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:32:52.171+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:32:52.173+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:32:52.172+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:32:52.989+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:32:53.023+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:32:53.022+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:32:53.087+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:32:53.087+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:32:53.128+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.963 seconds
+[2023-06-06T21:33:23.817+0000] {processor.py:153} INFO - Started process (PID=1078) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:33:23.818+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:33:23.819+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:33:23.819+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:33:24.930+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:33:24.965+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:33:24.965+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:33:25.002+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:33:25.002+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:33:25.042+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.228 seconds
+[2023-06-06T21:33:55.611+0000] {processor.py:153} INFO - Started process (PID=1114) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:33:55.613+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:33:55.615+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:33:55.614+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:33:56.304+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:33:56.330+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:33:56.329+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:33:56.353+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:33:56.353+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:33:56.376+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.769 seconds
+[2023-06-06T21:34:27.221+0000] {processor.py:153} INFO - Started process (PID=1157) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:34:27.223+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:34:27.224+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:34:27.224+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:34:28.539+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:34:28.595+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:34:28.594+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:34:28.657+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:34:28.657+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:34:28.703+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.485 seconds
+[2023-06-06T21:34:59.144+0000] {processor.py:153} INFO - Started process (PID=1201) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:34:59.146+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:34:59.147+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:34:59.147+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:34:59.950+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:34:59.975+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:34:59.975+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:35:00.002+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:35:00.002+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:35:00.047+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.906 seconds
+[2023-06-06T21:35:30.309+0000] {processor.py:153} INFO - Started process (PID=1237) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:35:30.310+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:35:30.312+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:35:30.312+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:35:31.790+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:35:31.824+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:35:31.823+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:35:31.856+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:35:31.856+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:35:31.885+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.582 seconds
+[2023-06-06T21:36:02.565+0000] {processor.py:153} INFO - Started process (PID=1273) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:36:02.567+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:36:02.568+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:36:02.568+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:36:03.313+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:36:03.336+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:36:03.335+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:36:03.362+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:36:03.362+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:36:03.385+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.825 seconds
+[2023-06-06T21:36:33.562+0000] {processor.py:153} INFO - Started process (PID=1326) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:36:33.564+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:36:33.566+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:36:33.566+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:36:34.976+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:36:35.013+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:36:35.013+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:36:35.052+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:36:35.052+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:36:35.085+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.527 seconds
+[2023-06-06T21:37:05.168+0000] {processor.py:153} INFO - Started process (PID=1362) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:37:05.170+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:37:05.171+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:37:05.171+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:37:05.874+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:37:05.899+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:37:05.899+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:37:05.934+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:37:05.934+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:37:05.958+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.792 seconds
+[2023-06-06T21:37:36.506+0000] {processor.py:153} INFO - Started process (PID=1414) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:37:36.508+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:37:36.509+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:37:36.509+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:37:37.451+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:37:37.477+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:37:37.476+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:37:37.504+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:37:37.504+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:37:37.526+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.025 seconds
+[2023-06-06T21:38:08.157+0000] {processor.py:153} INFO - Started process (PID=1450) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:38:08.163+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:38:08.165+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:38:08.165+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:38:08.954+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:38:08.981+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:38:08.980+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:38:09.008+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:38:09.008+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:38:09.035+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.884 seconds
+[2023-06-06T21:38:39.230+0000] {processor.py:153} INFO - Started process (PID=1495) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:38:39.231+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:38:39.233+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:38:39.233+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:38:40.236+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:38:40.321+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:38:40.320+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:38:40.389+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:38:40.388+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:38:40.433+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.207 seconds
+[2023-06-06T21:39:11.225+0000] {processor.py:153} INFO - Started process (PID=1538) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:39:11.227+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:39:11.229+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:39:11.229+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:39:12.920+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:39:13.093+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:39:13.091+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:39:13.182+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:39:13.182+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:39:13.232+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 2.014 seconds
+[2023-06-06T21:39:43.899+0000] {processor.py:153} INFO - Started process (PID=1574) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:39:43.902+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:39:43.903+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:39:43.903+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:39:44.945+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:39:44.980+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:39:44.979+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:39:45.036+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:39:45.036+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:39:45.068+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.174 seconds
+[2023-06-06T21:40:15.484+0000] {processor.py:153} INFO - Started process (PID=1627) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:40:15.485+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:40:15.486+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:40:15.486+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:40:16.290+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:40:16.327+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:40:16.326+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:40:16.360+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:40:16.360+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:40:16.398+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.917 seconds
+[2023-06-06T21:40:46.573+0000] {processor.py:153} INFO - Started process (PID=1664) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:40:46.577+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:40:46.579+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:40:46.579+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:40:47.889+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:40:47.930+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:40:47.930+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:40:47.974+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:40:47.974+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:40:48.025+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.462 seconds
+[2023-06-06T21:41:18.431+0000] {processor.py:153} INFO - Started process (PID=1716) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:41:18.433+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:41:18.435+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:41:18.434+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:41:19.448+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:41:19.474+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:41:19.474+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:41:19.503+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:41:19.503+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:41:19.527+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.100 seconds
+[2023-06-06T21:41:50.150+0000] {processor.py:153} INFO - Started process (PID=1752) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:41:50.151+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:41:50.152+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:41:50.152+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:41:50.832+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:41:50.898+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:41:50.897+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:41:50.933+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:41:50.933+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:41:50.963+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.817 seconds
+[2023-06-06T21:42:21.079+0000] {processor.py:153} INFO - Started process (PID=1788) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:42:21.081+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:42:21.082+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:42:21.082+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:42:21.879+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:42:21.914+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:42:21.913+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:42:21.953+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:42:21.953+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:42:21.979+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.904 seconds
+[2023-06-06T21:42:52.403+0000] {processor.py:153} INFO - Started process (PID=1840) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:42:52.404+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:42:52.405+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:42:52.405+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:42:53.156+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:42:53.179+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:42:53.178+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:42:53.206+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:42:53.205+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:42:53.234+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.835 seconds
+[2023-06-06T21:43:23.302+0000] {processor.py:153} INFO - Started process (PID=1877) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:43:23.303+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:43:23.304+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:43:23.304+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:43:24.019+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:43:24.048+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:43:24.047+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:43:24.083+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:43:24.082+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:43:24.102+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.803 seconds
+[2023-06-06T21:43:54.503+0000] {processor.py:153} INFO - Started process (PID=1913) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:43:54.504+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:43:54.506+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:43:54.505+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:43:55.168+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:43:55.199+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:43:55.199+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:43:55.268+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:43:55.268+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:43:55.317+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.820 seconds
+[2023-06-06T21:44:25.630+0000] {processor.py:153} INFO - Started process (PID=1965) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:44:25.632+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:44:25.633+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:44:25.632+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:44:26.442+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:44:26.468+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:44:26.467+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:44:26.492+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:44:26.492+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:44:26.514+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.887 seconds
+[2023-06-06T21:44:56.829+0000] {processor.py:153} INFO - Started process (PID=2001) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:44:56.832+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:44:56.834+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:44:56.833+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:44:57.727+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:44:57.752+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:44:57.752+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:44:57.784+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:44:57.784+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:44:57.816+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.993 seconds
+[2023-06-06T21:45:28.454+0000] {processor.py:153} INFO - Started process (PID=2053) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:45:28.455+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:45:28.457+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:45:28.457+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:45:29.903+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:45:29.946+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:45:29.945+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:45:30.034+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:45:30.034+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:45:30.184+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.736 seconds
+[2023-06-06T21:46:00.525+0000] {processor.py:153} INFO - Started process (PID=2089) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:46:00.527+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:46:00.528+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:46:00.528+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:46:01.566+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:46:01.604+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:46:01.603+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:46:01.655+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:46:01.655+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:46:01.695+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.175 seconds
+[2023-06-06T21:46:32.113+0000] {processor.py:153} INFO - Started process (PID=2134) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:46:32.127+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:46:32.133+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:46:32.133+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:46:33.202+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:46:33.235+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:46:33.234+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:46:33.268+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:46:33.268+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:46:33.300+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.191 seconds
+[2023-06-06T21:47:03.874+0000] {processor.py:153} INFO - Started process (PID=2178) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:47:03.876+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:47:03.877+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:47:03.877+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:47:04.870+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:47:04.897+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:47:04.897+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:47:04.934+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:47:04.934+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:47:04.960+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.089 seconds
+[2023-06-06T21:47:35.554+0000] {processor.py:153} INFO - Started process (PID=2214) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:47:35.556+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:47:35.557+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:47:35.557+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:47:36.325+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:47:36.348+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:47:36.348+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:47:36.376+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:47:36.376+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:47:36.428+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.879 seconds
+[2023-06-06T21:48:07.021+0000] {processor.py:153} INFO - Started process (PID=2267) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:48:07.023+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:48:07.024+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:48:07.024+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:48:08.041+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:48:08.082+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:48:08.081+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:48:08.117+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:48:08.117+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:48:08.149+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.131 seconds
+[2023-06-06T21:48:38.567+0000] {processor.py:153} INFO - Started process (PID=2303) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:48:38.569+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:48:38.570+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:48:38.570+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:48:39.327+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:48:39.356+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:48:39.356+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:48:39.385+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:48:39.385+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:48:39.415+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.852 seconds
+[2023-06-06T21:49:09.535+0000] {processor.py:153} INFO - Started process (PID=2356) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:49:09.537+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:49:09.539+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:49:09.538+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:49:10.612+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:49:10.649+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:49:10.648+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:49:10.697+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:49:10.696+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:49:10.724+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.198 seconds
+[2023-06-06T21:49:41.338+0000] {processor.py:153} INFO - Started process (PID=2392) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:49:41.339+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:49:41.340+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:49:41.340+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:49:42.137+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:49:42.163+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:49:42.163+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:49:42.188+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:49:42.188+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:49:42.212+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.880 seconds
+[2023-06-06T21:50:12.353+0000] {processor.py:153} INFO - Started process (PID=2428) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:50:12.354+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:50:12.355+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:50:12.355+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:50:13.084+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:50:13.108+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:50:13.108+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:50:13.137+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:50:13.136+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:50:13.163+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.814 seconds
+[2023-06-06T21:50:43.573+0000] {processor.py:153} INFO - Started process (PID=2481) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:50:43.574+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:50:43.576+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:50:43.575+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:50:44.349+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:50:44.375+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:50:44.374+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:50:44.402+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:50:44.402+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:50:44.432+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.864 seconds
+[2023-06-06T21:51:14.587+0000] {processor.py:153} INFO - Started process (PID=2517) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:51:14.589+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:51:14.590+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:51:14.589+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:51:15.244+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:51:15.268+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:51:15.267+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:51:15.297+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:51:15.296+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:51:15.319+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.737 seconds
+[2023-06-06T21:51:45.763+0000] {processor.py:153} INFO - Started process (PID=2569) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:51:45.765+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:51:45.769+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:51:45.769+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:51:47.415+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:51:47.458+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:51:47.457+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:51:47.504+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:51:47.503+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:51:47.535+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.777 seconds
+[2023-06-06T21:52:17.912+0000] {processor.py:153} INFO - Started process (PID=2606) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:52:17.913+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:52:17.914+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:52:17.914+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:52:18.699+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:52:18.721+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:52:18.721+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:52:18.753+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:52:18.753+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:52:18.783+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.876 seconds
+[2023-06-06T21:52:48.843+0000] {processor.py:153} INFO - Started process (PID=2642) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:52:48.844+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:52:48.845+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:52:48.845+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:52:49.464+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:52:49.487+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:52:49.486+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:52:49.514+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:52:49.514+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:52:49.539+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.699 seconds
+[2023-06-06T21:53:20.351+0000] {processor.py:153} INFO - Started process (PID=2693) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:53:20.352+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:53:20.353+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:53:20.353+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:53:21.565+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:53:21.609+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:53:21.608+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:53:21.654+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:53:21.654+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:53:21.686+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.340 seconds
+[2023-06-06T21:53:52.137+0000] {processor.py:153} INFO - Started process (PID=2729) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:53:52.139+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:53:52.140+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:53:52.140+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:53:52.840+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:53:52.872+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:53:52.871+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:53:52.902+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:53:52.902+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:53:52.933+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 0.800 seconds
+[2023-06-06T21:54:23.779+0000] {processor.py:153} INFO - Started process (PID=2766) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:54:23.790+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:54:23.797+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:54:23.797+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:54:29.778+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:54:29.899+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:54:29.897+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:54:30.005+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:54:30.004+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:54:30.113+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 6.349 seconds
+[2023-06-06T21:55:01.335+0000] {processor.py:153} INFO - Started process (PID=2802) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:55:01.375+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:55:01.386+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:55:01.385+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:55:06.942+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:55:07.248+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:55:07.247+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:55:07.770+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:55:07.769+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:55:07.963+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 6.636 seconds
+[2023-06-06T21:55:38.259+0000] {processor.py:153} INFO - Started process (PID=2838) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:55:38.262+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:55:38.274+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:55:38.263+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:55:41.262+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:55:41.345+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:55:41.344+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:55:41.456+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:55:41.450+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:55:41.525+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 3.274 seconds
+[2023-06-06T21:56:12.050+0000] {processor.py:153} INFO - Started process (PID=2866) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:56:12.058+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:56:12.065+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:56:12.065+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:56:14.904+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:56:14.997+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:56:14.986+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:56:15.087+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:56:15.087+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:56:15.188+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 3.145 seconds
+[2023-06-06T21:56:45.502+0000] {processor.py:153} INFO - Started process (PID=2893) to work on /opt/airflow/dags/create_infra.py
+[2023-06-06T21:56:45.505+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/create_infra.py for tasks to queue
+[2023-06-06T21:56:45.507+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:56:45.506+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:56:47.232+0000] {processor.py:753} INFO - DAG(s) dict_keys(['create_infra']) retrieved from /opt/airflow/dags/create_infra.py
+[2023-06-06T21:56:47.263+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:56:47.263+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-06-06T21:56:47.307+0000] {logging_mixin.py:137} INFO - [2023-06-06T21:56:47.307+0000] {dag.py:3441} INFO - Setting next_dagrun for create_infra to 2023-06-06T00:00:00+00:00, run_after=2023-06-07T00:00:00+00:00
+[2023-06-06T21:56:47.336+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/create_infra.py took 1.841 seconds

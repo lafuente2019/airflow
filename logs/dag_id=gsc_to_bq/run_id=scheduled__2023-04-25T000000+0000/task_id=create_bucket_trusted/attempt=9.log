@@ -1,0 +1,24 @@
+[2023-04-26T19:07:49.997+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.create_bucket_trusted scheduled__2023-04-25T00:00:00+00:00 [queued]>
+[2023-04-26T19:07:50.036+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.create_bucket_trusted scheduled__2023-04-25T00:00:00+00:00 [queued]>
+[2023-04-26T19:07:50.037+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T19:07:50.042+0000] {taskinstance.py:1280} INFO - Starting attempt 9 of 10
+[2023-04-26T19:07:50.043+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T19:07:50.094+0000] {taskinstance.py:1300} INFO - Executing <Task(GCSCreateBucketOperator): create_bucket_trusted> on 2023-04-25 00:00:00+00:00
+[2023-04-26T19:07:50.107+0000] {standard_task_runner.py:55} INFO - Started process 582 to run task
+[2023-04-26T19:07:50.114+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'create_bucket_trusted', 'scheduled__2023-04-25T00:00:00+00:00', '--job-id', '383', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmp_2_vlt1u']
+[2023-04-26T19:07:50.126+0000] {standard_task_runner.py:83} INFO - Job 383: Subtask create_bucket_trusted
+[2023-04-26T19:07:50.332+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.create_bucket_trusted scheduled__2023-04-25T00:00:00+00:00 [running]> on host b592efbffeab
+[2023-04-26T19:07:50.537+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=create_bucket_trusted
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-25T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=9
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-25T00:00:00+00:00
+[2023-04-26T19:07:50.554+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-04-26T19:07:50.624+0000] {gcs.py:880} INFO - Creating Bucket: bucket_trusted_jr; Location: us-central1; Storage Class: STANDARD
+[2023-04-26T19:07:52.608+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=gsc_to_bq, task_id=create_bucket_trusted, execution_date=20230425T000000, start_date=20230426T190750, end_date=20230426T190752
+[2023-04-26T19:07:52.726+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-04-26T19:07:52.774+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

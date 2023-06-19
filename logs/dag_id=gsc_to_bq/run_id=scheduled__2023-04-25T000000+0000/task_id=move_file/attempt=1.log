@@ -1,0 +1,29 @@
+[2023-04-27T14:30:41.788+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.move_file scheduled__2023-04-25T00:00:00+00:00 [queued]>
+[2023-04-27T14:30:41.806+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.move_file scheduled__2023-04-25T00:00:00+00:00 [queued]>
+[2023-04-27T14:30:41.807+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-27T14:30:41.807+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-04-27T14:30:41.808+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-27T14:30:41.832+0000] {taskinstance.py:1300} INFO - Executing <Task(GCSToGCSOperator): move_file> on 2023-04-25 00:00:00+00:00
+[2023-04-27T14:30:41.844+0000] {standard_task_runner.py:55} INFO - Started process 32490 to run task
+[2023-04-27T14:30:41.848+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'move_file', 'scheduled__2023-04-25T00:00:00+00:00', '--job-id', '409', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmpqa110cg2']
+[2023-04-27T14:30:41.854+0000] {standard_task_runner.py:83} INFO - Job 409: Subtask move_file
+[2023-04-27T14:30:41.957+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.move_file scheduled__2023-04-25T00:00:00+00:00 [running]> on host b592efbffeab
+[2023-04-27T14:30:42.076+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=move_file
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-25T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-25T00:00:00+00:00
+[2023-04-27T14:30:42.092+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-04-27T14:30:42.122+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/transfers/gcs_to_gcs.py", line 234, in execute
+    raise AirflowException(error_msg)
+airflow.exceptions.AirflowException: You must set source_object parameter or source_objects parameter. None set
+[2023-04-27T14:30:42.135+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=gsc_to_bq, task_id=move_file, execution_date=20230425T000000, start_date=20230427T143041, end_date=20230427T143042
+[2023-04-27T14:30:42.158+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 409 for task move_file (You must set source_object parameter or source_objects parameter. None set; 32490)
+[2023-04-27T14:30:42.178+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-04-27T14:30:42.209+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,45 @@
+[2023-05-04T13:56:22.329+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04T13:56:22.356+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04T13:56:22.356+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04T13:56:22.358+0000] {taskinstance.py:1280} INFO - Starting attempt 7 of 8
+[2023-05-04T13:56:22.358+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04T13:56:22.402+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): ingest_dado> on 2023-05-03 00:00:00+00:00
+[2023-05-04T13:56:22.418+0000] {standard_task_runner.py:55} INFO - Started process 1189 to run task
+[2023-05-04T13:56:22.426+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'ingest_dado', 'scheduled__2023-05-03T00:00:00+00:00', '--job-id', '738', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmp43gswo_d']
+[2023-05-04T13:56:22.431+0000] {standard_task_runner.py:83} INFO - Job 738: Subtask ingest_dado
+[2023-05-04T13:56:22.565+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-03T00:00:00+00:00 [running]> on host 43ca0f57de8c
+[2023-05-04T13:56:22.738+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=ingest_dado
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=7
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-03T00:00:00+00:00
+[2023-05-04T13:56:25.582+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1091)'))': /token
+[2023-05-04T13:56:26.568+0000] {logging_mixin.py:137} INFO - Table(TableReference(DatasetReference('semiotic-joy-379201', 'venda'), 'tb_vendas'))
+[2023-05-04T13:56:26.569+0000] {logging_mixin.py:137} INFO - [{'name': 'ID_MARCA', 'type': 'INTEGER'}, {'name': 'MARCA', 'type': 'STRING'}, {'name': 'ID_LINHA', 'type': 'INTEGER'}, {'name': 'LINHA', 'type': 'STRING'}, {'name': 'DATA_VENDA', 'type': 'DATE'}, {'name': 'QTD_VENDA', 'type': 'INTEGER'}]
+[2023-05-04T13:56:28.192+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/gcs_to_bq.py", line 50, in ingest_dados
+    df = pd.read_excel(f"gs://bucket_raw_jr/input/Base 2017.xlsx")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 364, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 1233, in __init__
+    self._reader = self._engines[engine](self._io, storage_options=storage_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_openpyxl.py", line 521, in __init__
+    import_optional_dependency("openpyxl")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/compat/_optional.py", line 118, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+[2023-05-04T13:56:28.228+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=gsc_to_bq, task_id=ingest_dado, execution_date=20230503T000000, start_date=20230504T135622, end_date=20230504T135628
+[2023-05-04T13:56:28.263+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 738 for task ingest_dado (Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.; 1189)
+[2023-05-04T13:56:28.313+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-05-04T13:56:28.422+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

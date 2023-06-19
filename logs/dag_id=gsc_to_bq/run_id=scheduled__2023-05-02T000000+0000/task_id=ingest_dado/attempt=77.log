@@ -1,0 +1,30 @@
+[2023-05-03T23:35:08.678+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [queued]>
+[2023-05-03T23:35:08.702+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [queued]>
+[2023-05-03T23:35:08.703+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T23:35:08.704+0000] {taskinstance.py:1280} INFO - Starting attempt 77 of 78
+[2023-05-03T23:35:08.705+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T23:35:08.735+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): ingest_dado> on 2023-05-02 00:00:00+00:00
+[2023-05-03T23:35:08.743+0000] {standard_task_runner.py:55} INFO - Started process 5938 to run task
+[2023-05-03T23:35:08.748+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'ingest_dado', 'scheduled__2023-05-02T00:00:00+00:00', '--job-id', '716', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmp91c9h3vl']
+[2023-05-03T23:35:08.751+0000] {standard_task_runner.py:83} INFO - Job 716: Subtask ingest_dado
+[2023-05-03T23:35:08.837+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [running]> on host 23a1495f3fb6
+[2023-05-03T23:35:08.934+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=ingest_dado
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=77
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-02T00:00:00+00:00
+[2023-05-03T23:35:09.713+0000] {logging_mixin.py:137} INFO - /opt/***/arq/gcsToBq.json
+[2023-05-03T23:35:09.757+0000] {logging_mixin.py:137} INFO - type                                                service_account
+project_id                                      semiotic-joy-379201
+private_key_id             86d9edbd80e634c4200c629d2e03ab23028a3733
+private_key       -----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqh...
+client_email      gcs-to-bq@semiotic-joy-379201.iam.gserviceacco...
+dtype: object
+[2023-05-03T23:35:09.758+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-03T23:35:09.772+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=gsc_to_bq, task_id=ingest_dado, execution_date=20230502T000000, start_date=20230503T233508, end_date=20230503T233509
+[2023-05-03T23:35:09.847+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-05-03T23:35:09.874+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

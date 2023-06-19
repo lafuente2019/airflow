@@ -1,0 +1,21 @@
+[2023-04-28T18:19:13.983+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.create_bucket_raw scheduled__2023-04-27T00:00:00+00:00 [queued]>
+[2023-04-28T18:19:14.005+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.create_bucket_raw scheduled__2023-04-27T00:00:00+00:00 [queued]>
+[2023-04-28T18:19:14.006+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-28T18:19:14.008+0000] {taskinstance.py:1280} INFO - Starting attempt 5 of 6
+[2023-04-28T18:19:14.009+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-28T18:19:14.037+0000] {taskinstance.py:1300} INFO - Executing <Task(GCSCreateBucketOperator): create_bucket_raw> on 2023-04-27 00:00:00+00:00
+[2023-04-28T18:19:14.050+0000] {standard_task_runner.py:55} INFO - Started process 20606 to run task
+[2023-04-28T18:19:14.056+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'create_bucket_raw', 'scheduled__2023-04-27T00:00:00+00:00', '--job-id', '440', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmpixausk32']
+[2023-04-28T18:19:14.063+0000] {standard_task_runner.py:83} INFO - Job 440: Subtask create_bucket_raw
+[2023-04-28T18:19:14.195+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.create_bucket_raw scheduled__2023-04-27T00:00:00+00:00 [running]> on host b592efbffeab
+[2023-04-28T18:19:14.326+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=create_bucket_raw
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-27T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=5
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-27T00:00:00+00:00
+[2023-04-28T18:19:14.342+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-04-28T18:19:14.378+0000] {gcs.py:880} INFO - Creating Bucket: bucket_raw_jr; Location: us-central1; Storage Class: STANDARD

@@ -1,0 +1,33 @@
+[2023-03-11T00:15:16.665+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ingestion_dados_postgres.insere_dados_table_ed_replica manual__2023-03-10T20:50:06.020796+00:00 [queued]>
+[2023-03-11T00:15:16.730+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ingestion_dados_postgres.insere_dados_table_ed_replica manual__2023-03-10T20:50:06.020796+00:00 [queued]>
+[2023-03-11T00:15:16.731+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-11T00:15:16.733+0000] {taskinstance.py:1280} INFO - Starting attempt 4 of 4
+[2023-03-11T00:15:16.733+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-11T00:15:16.859+0000] {taskinstance.py:1300} INFO - Executing <Task(PostgresOperator): insere_dados_table_ed_replica> on 2023-03-10 20:50:06.020796+00:00
+[2023-03-11T00:15:16.887+0000] {standard_task_runner.py:55} INFO - Started process 13990 to run task
+[2023-03-11T00:15:16.900+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion_dados_postgres', 'insere_dados_table_ed_replica', 'manual__2023-03-10T20:50:06.020796+00:00', '--job-id', '198', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_dados_postgres.py', '--cfg-path', '/tmp/tmph0wqmc9n']
+[2023-03-11T00:15:16.902+0000] {standard_task_runner.py:83} INFO - Job 198: Subtask insere_dados_table_ed_replica
+[2023-03-11T00:15:17.245+0000] {task_command.py:388} INFO - Running <TaskInstance: ingestion_dados_postgres.insere_dados_table_ed_replica manual__2023-03-10T20:50:06.020796+00:00 [running]> on host 9ff22fa0bca3
+[2023-03-11T00:15:17.527+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ingestion_dados_postgres
+AIRFLOW_CTX_TASK_ID=insere_dados_table_ed_replica
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-10T20:50:06.020796+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-10T20:50:06.020796+00:00
+[2023-03-11T00:15:17.532+0000] {sql.py:254} INFO - Executing: insert into tb_data_engineering_replica
+select * from tb_data_engineering
+where nivel = 'SPEC'
+        
+[2023-03-11T00:15:17.558+0000] {base.py:73} INFO - Using connection ID 'postgres-***' for task execution.
+[2023-03-11T00:15:18.545+0000] {base.py:73} INFO - Using connection ID 'postgres-***' for task execution.
+[2023-03-11T00:15:18.751+0000] {sql.py:375} INFO - Running statement: insert into tb_data_engineering_replica
+select * from tb_data_engineering
+where nivel = 'SPEC'
+        , parameters: None
+[2023-03-11T00:15:18.778+0000] {sql.py:384} INFO - Rows affected: 6
+[2023-03-11T00:15:18.821+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=ingestion_dados_postgres, task_id=insere_dados_table_ed_replica, execution_date=20230310T205006, start_date=20230311T001516, end_date=20230311T001518
+[2023-03-11T00:15:18.920+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-11T00:15:19.011+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,135 @@
+[2023-04-28T00:00:01.961+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.create_bucket_raw scheduled__2023-04-27T00:00:00+00:00 [queued]>
+[2023-04-28T00:00:01.969+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.create_bucket_raw scheduled__2023-04-27T00:00:00+00:00 [queued]>
+[2023-04-28T00:00:01.969+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-28T00:00:01.971+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-04-28T00:00:01.972+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-28T00:00:01.986+0000] {taskinstance.py:1300} INFO - Executing <Task(GCSCreateBucketOperator): create_bucket_raw> on 2023-04-27 00:00:00+00:00
+[2023-04-28T00:00:01.991+0000] {standard_task_runner.py:55} INFO - Started process 10111 to run task
+[2023-04-28T00:00:01.994+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'create_bucket_raw', 'scheduled__2023-04-27T00:00:00+00:00', '--job-id', '435', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmpv9bo7kuo']
+[2023-04-28T00:00:01.997+0000] {standard_task_runner.py:83} INFO - Job 435: Subtask create_bucket_raw
+[2023-04-28T00:00:02.061+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.create_bucket_raw scheduled__2023-04-27T00:00:00+00:00 [running]> on host b592efbffeab
+[2023-04-28T00:00:02.134+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=create_bucket_raw
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-27T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-27T00:00:00+00:00
+[2023-04-28T00:00:02.143+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-04-28T00:00:02.162+0000] {gcs.py:880} INFO - Creating Bucket: bucket_raw_jr; Location: us-central1; Storage Class: STANDARD
+[2023-04-28T00:16:03.288+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fd4a28ce050>, 'Connection to oauth2.googleapis.com timed out. (connect timeout=60)')': /token
+[2023-04-28T00:32:04.421+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fd4a28ce390>, 'Connection to oauth2.googleapis.com timed out. (connect timeout=60)')': /token
+[2023-04-28T00:48:05.406+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fd4a28ce8d0>, 'Connection to oauth2.googleapis.com timed out. (connect timeout=60)')': /token
+[2023-04-28T01:04:06.482+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 182, in _new_conn
+    % (self.host, self.timeout),
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7fd4a28ced10>, 'Connection to oauth2.googleapis.com timed out. (connect timeout=60)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 499, in send
+    timeout=timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fd4a28ced10>, 'Connection to oauth2.googleapis.com timed out. (connect timeout=60)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/transport/requests.py", line 194, in __call__
+    method, url, data=body, headers=headers, timeout=timeout, **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 553, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fd4a28ced10>, 'Connection to oauth2.googleapis.com timed out. (connect timeout=60)'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 490, in api_request
+    extra_api_info=extra_api_info,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 342, in _make_request
+    method, url, headers, data, target_object, timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 380, in _do_request
+    url=url, method=method, headers=headers, data=data, timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/transport/requests.py", line 545, in request
+    self.credentials.before_request(auth_request, method, url, request_headers)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/credentials.py", line 135, in before_request
+    self.refresh(request)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/service_account.py", line 430, in refresh
+    request, self._token_uri, assertion
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 295, in jwt_grant
+    request, token_uri, body, can_retry=can_retry
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 262, in _token_endpoint_request
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 204, in _token_endpoint_request_no_throw
+    request_succeeded, response_data, retryable_error = _perform_request()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 181, in _perform_request
+    method="POST", url=token_uri, headers=headers, body=body, **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/transport/requests.py", line 199, in __call__
+    six.raise_from(new_exc, caught_exc)
+  File "<string>", line 3, in raise_from
+google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fd4a28ced10>, 'Connection to oauth2.googleapis.com timed out. (connect timeout=60)'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/gcs.py", line 158, in execute
+    labels=self.labels,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 462, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/gcs.py", line 897, in create_bucket
+    bucket.create(project=project_id, location=location)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/bucket.py", line 989, in create
+    retry=retry,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/client.py", line 954, in create_bucket
+    _target_object=bucket,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/client.py", line 620, in _post_resource
+    _target_object=_target_object,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/_http.py", line 72, in api_request
+    return call()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 288, in retry_wrapped_func
+    on_error=on_error,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 210, in retry_target
+    ) from last_exc
+google.api_core.exceptions.RetryError: Deadline of 120.0s exceeded while calling target function, last exception: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fd4a28ced10>, 'Connection to oauth2.googleapis.com timed out. (connect timeout=60)'))
+[2023-04-28T01:04:06.500+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=gsc_to_bq, task_id=create_bucket_raw, execution_date=20230427T000000, start_date=20230428T000001, end_date=20230428T010406
+[2023-04-28T01:04:06.527+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 435 for task create_bucket_raw (Deadline of 120.0s exceeded while calling target function, last exception: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fd4a28ced10>, 'Connection to oauth2.googleapis.com timed out. (connect timeout=60)')); 10111)
+[2023-04-28T01:04:06.576+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-04-28T01:04:06.603+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

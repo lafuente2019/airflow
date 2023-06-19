@@ -1,0 +1,48 @@
+[2023-05-03T20:57:19.015+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [queued]>
+[2023-05-03T20:57:19.032+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [queued]>
+[2023-05-03T20:57:19.033+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T20:57:19.034+0000] {taskinstance.py:1280} INFO - Starting attempt 46 of 46
+[2023-05-03T20:57:19.034+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T20:57:19.059+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): ingest_dado> on 2023-05-02 00:00:00+00:00
+[2023-05-03T20:57:19.066+0000] {standard_task_runner.py:55} INFO - Started process 3778 to run task
+[2023-05-03T20:57:19.071+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'ingest_dado', 'scheduled__2023-05-02T00:00:00+00:00', '--job-id', '674', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmpw0pime3e']
+[2023-05-03T20:57:19.074+0000] {standard_task_runner.py:83} INFO - Job 674: Subtask ingest_dado
+[2023-05-03T20:57:19.181+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [running]> on host cda8db522718
+[2023-05-03T20:57:19.301+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=ingest_dado
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=46
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-02T00:00:00+00:00
+[2023-05-03T20:57:20.029+0000] {_metadata.py:104} WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: Remote end closed connection without response
+[2023-05-03T20:57:20.033+0000] {_metadata.py:104} WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: Remote end closed connection without response
+[2023-05-03T20:57:20.037+0000] {_metadata.py:104} WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: Remote end closed connection without response
+[2023-05-03T20:57:20.037+0000] {_default.py:302} WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+[2023-05-03T20:57:20.038+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/gcs_to_bq.py", line 38, in ingest_dados
+    client = bigquery.Client()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 235, in __init__
+    _http=_http,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/client/__init__.py", line 320, in __init__
+    _ClientProjectMixin.__init__(self, project=project, credentials=credentials)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/client/__init__.py", line 268, in __init__
+    project = self._determine_default(project)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/client/__init__.py", line 287, in _determine_default
+    return _determine_default_project(project)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_helpers/__init__.py", line 152, in _determine_default_project
+    _, project = google.auth.default()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/_default.py", line 653, in default
+    raise exceptions.DefaultCredentialsError(_HELP_MESSAGE)
+google.auth.exceptions.DefaultCredentialsError: Could not automatically determine credentials. Please set GOOGLE_APPLICATION_CREDENTIALS or explicitly create credentials and re-run the application. For more information, please see https://cloud.google.com/docs/authentication/getting-started
+[2023-05-03T20:57:20.060+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=gsc_to_bq, task_id=ingest_dado, execution_date=20230502T000000, start_date=20230503T205719, end_date=20230503T205720
+[2023-05-03T20:57:20.073+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 674 for task ingest_dado (Could not automatically determine credentials. Please set GOOGLE_APPLICATION_CREDENTIALS or explicitly create credentials and re-run the application. For more information, please see https://cloud.google.com/docs/authentication/getting-started; 3778)
+[2023-05-03T20:57:20.127+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-05-03T20:57:20.152+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,39 @@
+[2023-03-09T14:30:34.684+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_sql.insere_dados_tb_data_engineering scheduled__2023-03-09T13:30:00+00:00 [queued]>
+[2023-03-09T14:30:34.726+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_sql.insere_dados_tb_data_engineering scheduled__2023-03-09T13:30:00+00:00 [queued]>
+[2023-03-09T14:30:34.727+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-09T14:30:34.728+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-03-09T14:30:34.729+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-09T14:30:34.786+0000] {taskinstance.py:1300} INFO - Executing <Task(PostgresOperator): insere_dados_tb_data_engineering> on 2023-03-09 13:30:00+00:00
+[2023-03-09T14:30:34.799+0000] {standard_task_runner.py:55} INFO - Started process 2973 to run task
+[2023-03-09T14:30:34.809+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_sql', 'insere_dados_tb_data_engineering', 'scheduled__2023-03-09T13:30:00+00:00', '--job-id', '155', '--raw', '--subdir', 'DAGS_FOLDER/dag_sql.py', '--cfg-path', '/tmp/tmpfbyl8cja']
+[2023-03-09T14:30:34.815+0000] {standard_task_runner.py:83} INFO - Job 155: Subtask insere_dados_tb_data_engineering
+[2023-03-09T14:30:35.202+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_sql.insere_dados_tb_data_engineering scheduled__2023-03-09T13:30:00+00:00 [running]> on host 55fa40ce7ec1
+[2023-03-09T14:30:35.569+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_sql
+AIRFLOW_CTX_TASK_ID=insere_dados_tb_data_engineering
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-09T13:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-09T13:30:00+00:00
+[2023-03-09T14:30:35.575+0000] {sql.py:254} INFO - Executing: insert into tb_data_engineering(name,cargo,nivel,dt)
+values('Junior Lafuente', 'DATA ENGINERIING', 'PLENO', CURRENT_DATE),
+      ('Guilherme Delmondes', 'DATA ENGINERIING', 'SPEC', CURRENT_DATE),
+      ('Bruno Rodrigues', 'DATA ENGINERIING', 'SENIOR', CURRENT_DATE),
+      ('Rafael Miranda', 'DATA ENGINERIING', 'SPEC', CURRENT_DATE),
+      ('Diogo brido nilo', 'DATA ENGINERIING', 'PLENO', CURRENT_DATE);
+        
+[2023-03-09T14:30:35.632+0000] {base.py:73} INFO - Using connection ID 'postgres-***' for task execution.
+[2023-03-09T14:30:36.547+0000] {base.py:73} INFO - Using connection ID 'postgres-***' for task execution.
+[2023-03-09T14:30:36.832+0000] {sql.py:375} INFO - Running statement: insert into tb_data_engineering(name,cargo,nivel,dt)
+values('Junior Lafuente', 'DATA ENGINERIING', 'PLENO', CURRENT_DATE),
+      ('Guilherme Delmondes', 'DATA ENGINERIING', 'SPEC', CURRENT_DATE),
+      ('Bruno Rodrigues', 'DATA ENGINERIING', 'SENIOR', CURRENT_DATE),
+      ('Rafael Miranda', 'DATA ENGINERIING', 'SPEC', CURRENT_DATE),
+      ('Diogo brido nilo', 'DATA ENGINERIING', 'PLENO', CURRENT_DATE);
+        , parameters: None
+[2023-03-09T14:30:36.863+0000] {sql.py:384} INFO - Rows affected: 5
+[2023-03-09T14:30:36.895+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=dag_sql, task_id=insere_dados_tb_data_engineering, execution_date=20230309T133000, start_date=20230309T143034, end_date=20230309T143036
+[2023-03-09T14:30:36.982+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-09T14:30:37.060+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,2226 @@
+[2023-03-16T23:38:31.790+0000] {processor.py:153} INFO - Started process (PID=84) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:38:31.792+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:38:31.808+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:38:31.807+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:38:32.138+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:38:32.118+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:38:32.148+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:38:32.266+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.483 seconds
+[2023-03-16T23:39:03.244+0000] {processor.py:153} INFO - Started process (PID=151) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:39:03.253+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:39:03.274+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:39:03.273+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:39:04.032+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:39:04.029+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:39:04.056+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:39:04.150+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.917 seconds
+[2023-03-16T23:39:35.084+0000] {processor.py:153} INFO - Started process (PID=215) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:39:35.122+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:39:35.159+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:39:35.159+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:39:35.582+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:39:35.580+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:39:35.590+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:39:35.662+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.584 seconds
+[2023-03-16T23:40:05.787+0000] {processor.py:153} INFO - Started process (PID=289) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:40:05.794+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:40:05.797+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:40:05.797+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:40:05.854+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:40:05.852+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:40:05.856+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:40:05.936+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.156 seconds
+[2023-03-16T23:40:36.274+0000] {processor.py:153} INFO - Started process (PID=362) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:40:36.276+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:40:36.278+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:40:36.278+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:40:36.335+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:40:36.333+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:40:36.337+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:40:36.391+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.130 seconds
+[2023-03-16T23:41:06.491+0000] {processor.py:153} INFO - Started process (PID=427) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:41:06.494+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:41:06.496+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:41:06.495+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:41:06.556+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:41:06.550+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:41:06.558+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:41:06.607+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.124 seconds
+[2023-03-16T23:41:37.163+0000] {processor.py:153} INFO - Started process (PID=493) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:41:37.165+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:41:37.168+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:41:37.168+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:41:37.236+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:41:37.235+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:41:37.238+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:41:37.291+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.133 seconds
+[2023-03-16T23:42:08.360+0000] {processor.py:153} INFO - Started process (PID=567) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:42:08.362+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:42:08.365+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:42:08.364+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:42:08.458+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:42:08.456+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:42:08.467+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:42:08.537+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.185 seconds
+[2023-03-16T23:42:39.350+0000] {processor.py:153} INFO - Started process (PID=640) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:42:39.373+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:42:39.379+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:42:39.378+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:42:39.530+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:42:39.528+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:42:39.532+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:42:39.581+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.238 seconds
+[2023-03-16T23:43:10.180+0000] {processor.py:153} INFO - Started process (PID=699) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:43:10.188+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:43:10.196+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:43:10.196+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:43:10.310+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:43:10.308+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:43:10.312+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:43:10.381+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.220 seconds
+[2023-03-16T23:43:40.536+0000] {processor.py:153} INFO - Started process (PID=770) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:43:40.540+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:43:40.552+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:43:40.551+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:43:40.678+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:43:40.676+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:43:40.680+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:43:40.748+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.231 seconds
+[2023-03-16T23:44:11.633+0000] {processor.py:153} INFO - Started process (PID=837) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:44:11.649+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:44:11.656+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:44:11.655+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:44:11.990+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:44:11.985+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:44:11.992+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:44:12.149+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.523 seconds
+[2023-03-16T23:44:42.663+0000] {processor.py:153} INFO - Started process (PID=901) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:44:42.665+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:44:42.667+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:44:42.666+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:44:42.875+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:44:42.872+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:44:42.876+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:44:42.938+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.281 seconds
+[2023-03-16T23:45:13.934+0000] {processor.py:153} INFO - Started process (PID=968) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:45:13.946+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:45:13.953+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:45:13.952+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:45:14.834+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:45:14.832+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:45:14.836+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:45:14.947+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 1.027 seconds
+[2023-03-16T23:45:45.488+0000] {processor.py:153} INFO - Started process (PID=1032) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:45:45.490+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:45:45.492+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:45:45.492+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:45:45.554+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:45:45.552+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:45:45.556+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:45:45.594+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.110 seconds
+[2023-03-16T23:46:15.977+0000] {processor.py:153} INFO - Started process (PID=1105) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:46:15.981+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:46:15.983+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:46:15.983+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:46:16.218+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:46:16.216+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:46:16.220+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:46:16.305+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.335 seconds
+[2023-03-16T23:46:47.068+0000] {processor.py:153} INFO - Started process (PID=1177) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:46:47.070+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:46:47.072+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:46:47.071+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:46:47.126+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:46:47.124+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:46:47.128+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:46:47.160+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.098 seconds
+[2023-03-16T23:47:17.754+0000] {processor.py:153} INFO - Started process (PID=1250) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:47:17.757+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:47:17.760+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:47:17.760+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:47:17.845+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:47:17.843+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:47:17.846+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:47:17.915+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.172 seconds
+[2023-03-16T23:47:48.068+0000] {processor.py:153} INFO - Started process (PID=1316) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:47:48.070+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:47:48.079+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:47:48.076+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:47:48.143+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:47:48.140+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:47:48.145+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:47:48.195+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.135 seconds
+[2023-03-16T23:48:18.580+0000] {processor.py:153} INFO - Started process (PID=1385) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:48:18.583+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:48:18.585+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:48:18.585+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:48:18.647+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:48:18.645+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:48:18.649+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:48:18.716+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.154 seconds
+[2023-03-16T23:48:48.997+0000] {processor.py:153} INFO - Started process (PID=1451) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:48:48.999+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:48:49.000+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:48:49.000+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:48:49.060+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:48:49.058+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:48:49.061+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:48:49.101+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.111 seconds
+[2023-03-16T23:49:19.364+0000] {processor.py:153} INFO - Started process (PID=1524) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:49:19.366+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:49:19.368+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:49:19.368+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:49:19.419+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:49:19.417+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:49:19.421+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:49:19.465+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.114 seconds
+[2023-03-16T23:49:50.140+0000] {processor.py:153} INFO - Started process (PID=1597) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:49:50.142+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:49:50.150+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:49:50.149+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:49:50.250+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:49:50.248+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:49:50.252+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:49:50.299+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.165 seconds
+[2023-03-16T23:50:21.019+0000] {processor.py:153} INFO - Started process (PID=1670) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:50:21.021+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:50:21.026+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:50:21.025+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:50:21.082+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:50:21.080+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:50:21.084+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:50:21.157+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.145 seconds
+[2023-03-16T23:50:51.998+0000] {processor.py:153} INFO - Started process (PID=1743) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:50:52.000+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:50:52.001+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:50:52.001+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:50:52.059+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:50:52.056+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:50:52.060+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:50:52.102+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.109 seconds
+[2023-03-16T23:51:22.595+0000] {processor.py:153} INFO - Started process (PID=1816) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:51:22.597+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:51:22.600+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:51:22.599+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:51:22.766+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:51:22.764+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:51:22.768+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:51:22.823+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.240 seconds
+[2023-03-16T23:51:53.560+0000] {processor.py:153} INFO - Started process (PID=1890) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:51:53.563+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:51:53.565+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:51:53.565+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:51:53.695+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:51:53.693+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:51:53.698+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:51:53.781+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.229 seconds
+[2023-03-16T23:52:24.460+0000] {processor.py:153} INFO - Started process (PID=1963) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:52:24.463+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:52:24.467+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:52:24.466+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:52:24.591+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:52:24.589+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:52:24.592+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:52:24.644+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.191 seconds
+[2023-03-16T23:52:55.087+0000] {processor.py:153} INFO - Started process (PID=2036) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:52:55.089+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:52:55.093+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:52:55.093+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:52:55.263+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:52:55.261+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:52:55.264+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:52:55.362+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.296 seconds
+[2023-03-16T23:53:26.128+0000] {processor.py:153} INFO - Started process (PID=2109) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:53:26.130+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:53:26.132+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:53:26.131+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:53:26.184+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:53:26.182+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:53:26.185+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:53:26.225+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.107 seconds
+[2023-03-16T23:53:56.900+0000] {processor.py:153} INFO - Started process (PID=2182) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:53:56.904+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:53:56.905+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:53:56.905+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:53:57.040+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:53:57.032+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:53:57.055+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:53:57.140+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.245 seconds
+[2023-03-16T23:54:27.443+0000] {processor.py:153} INFO - Started process (PID=2255) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:54:27.444+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:54:27.445+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:54:27.445+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:54:27.497+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:54:27.494+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:54:27.499+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:54:27.537+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.099 seconds
+[2023-03-16T23:54:58.219+0000] {processor.py:153} INFO - Started process (PID=2328) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:54:58.220+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:54:58.222+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:54:58.222+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:54:58.279+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:54:58.277+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:54:58.280+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:54:58.306+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.093 seconds
+[2023-03-16T23:55:28.447+0000] {processor.py:153} INFO - Started process (PID=2401) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:55:28.449+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:55:28.451+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:55:28.451+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:55:28.508+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:55:28.506+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:55:28.509+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:55:28.555+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.115 seconds
+[2023-03-16T23:55:59.433+0000] {processor.py:153} INFO - Started process (PID=2474) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:55:59.435+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:55:59.437+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:55:59.436+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:55:59.554+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:55:59.544+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:55:59.569+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:55:59.657+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.238 seconds
+[2023-03-16T23:56:29.775+0000] {processor.py:153} INFO - Started process (PID=2547) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:56:29.777+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:56:29.782+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:56:29.782+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:56:29.839+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:56:29.836+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:56:29.841+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:56:29.894+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.126 seconds
+[2023-03-16T23:57:00.002+0000] {processor.py:153} INFO - Started process (PID=2622) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:57:00.004+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:57:00.005+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:57:00.005+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:57:00.062+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:57:00.061+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:57:00.064+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:57:00.127+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.128 seconds
+[2023-03-16T23:57:30.820+0000] {processor.py:153} INFO - Started process (PID=2713) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:57:30.823+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:57:30.825+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:57:30.825+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:57:30.877+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:57:30.875+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:57:30.880+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:57:30.924+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.113 seconds
+[2023-03-16T23:58:01.340+0000] {processor.py:153} INFO - Started process (PID=2786) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:58:01.343+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:58:01.346+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:58:01.346+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:58:01.397+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:58:01.394+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:58:01.399+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:58:01.432+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.098 seconds
+[2023-03-16T23:58:31.776+0000] {processor.py:153} INFO - Started process (PID=2859) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:58:31.780+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:58:31.784+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:58:31.784+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:58:31.844+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:58:31.839+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:58:31.846+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:58:31.898+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.129 seconds
+[2023-03-16T23:59:02.196+0000] {processor.py:153} INFO - Started process (PID=2931) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:59:02.199+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:59:02.201+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:59:02.200+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:59:02.249+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:59:02.247+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:59:02.250+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:59:02.308+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.120 seconds
+[2023-03-16T23:59:32.861+0000] {processor.py:153} INFO - Started process (PID=3004) to work on /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:59:32.863+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/gcs_to_bq.py for tasks to queue
+[2023-03-16T23:59:32.865+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:59:32.865+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:59:32.926+0000] {logging_mixin.py:137} INFO - [2023-03-16T23:59:32.924+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/gcs_to_bq.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/gcs_to_bq.py", line 105
+    function_code = """
+import base64
+import json
+from google.cloud import storage
+from google.cloud import bigquery
+
+def process_message(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    data = json.loads(message)
+    input_bucket_name = data['input_bucket_name']
+    input_object_name = data['input_object_name']
+    output_bucket_name = data['output_bucket_name']
+    output_object_name = data['output_object_name']
+    client = storage.Client()
+    input_bucket = client.bucket(input_bucket_name)
+    input_blob = input_bucket.blob(input_object_name)
+    output_bucket = client.bucket(output_bucket_name)
+    output_blob = output_bucket.blob(output_object_name)
+    df = pd.read_csv(input_blob.download_as_string())
+                       
+             
+           
+                                
+                                 
+
+                                    
+                                                             
+                              
+                                                 
+                                                 
+                                                   
+                                                   
+                             
+                                                   
+                                                     
+                                                     
+                                                        
+                                                    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+[2023-03-16T23:59:32.928+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/gcs_to_bq.py
+[2023-03-16T23:59:32.959+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/gcs_to_bq.py took 0.104 seconds

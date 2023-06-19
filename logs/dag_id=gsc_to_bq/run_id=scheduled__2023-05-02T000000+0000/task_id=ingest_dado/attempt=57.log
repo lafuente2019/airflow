@@ -1,0 +1,36 @@
+[2023-05-03T21:40:56.505+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [queued]>
+[2023-05-03T21:40:56.541+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [queued]>
+[2023-05-03T21:40:56.543+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T21:40:56.578+0000] {taskinstance.py:1280} INFO - Starting attempt 57 of 58
+[2023-05-03T21:40:56.580+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T21:40:56.644+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): ingest_dado> on 2023-05-02 00:00:00+00:00
+[2023-05-03T21:40:56.667+0000] {standard_task_runner.py:55} INFO - Started process 6923 to run task
+[2023-05-03T21:40:56.743+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'ingest_dado', 'scheduled__2023-05-02T00:00:00+00:00', '--job-id', '689', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmpqncwbx30']
+[2023-05-03T21:40:56.758+0000] {standard_task_runner.py:83} INFO - Job 689: Subtask ingest_dado
+[2023-05-03T21:41:01.090+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [running]> on host cda8db522718
+[2023-05-03T21:41:01.398+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=ingest_dado
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=57
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-02T00:00:00+00:00
+[2023-05-03T21:41:05.501+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/gcs_to_bq.py", line 32, in ingest_dados
+    credentials = service_account.Credentials.from_service_account_file(keyfile, scope = ['https://www.googleapis.com/auth/cloud-plataform'])
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/service_account.py", line 242, in from_service_account_file
+    filename, require=["client_email", "token_uri"]
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/_service_account_info.py", line 80, in from_filename
+    with io.open(filename, "r", encoding="utf-8") as json_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'oauth.json'
+[2023-05-03T21:41:05.552+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=gsc_to_bq, task_id=ingest_dado, execution_date=20230502T000000, start_date=20230503T214056, end_date=20230503T214105
+[2023-05-03T21:41:05.598+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 689 for task ingest_dado ([Errno 2] No such file or directory: 'oauth.json'; 6923)
+[2023-05-03T21:41:05.712+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-05-03T21:41:05.790+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

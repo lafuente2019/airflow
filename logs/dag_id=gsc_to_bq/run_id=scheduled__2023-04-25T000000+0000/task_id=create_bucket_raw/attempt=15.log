@@ -1,0 +1,25 @@
+[2023-04-26T19:43:26.437+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.create_bucket_raw scheduled__2023-04-25T00:00:00+00:00 [queued]>
+[2023-04-26T19:43:26.475+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.create_bucket_raw scheduled__2023-04-25T00:00:00+00:00 [queued]>
+[2023-04-26T19:43:26.475+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T19:43:26.480+0000] {taskinstance.py:1280} INFO - Starting attempt 15 of 16
+[2023-04-26T19:43:26.481+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T19:43:26.522+0000] {taskinstance.py:1300} INFO - Executing <Task(GCSCreateBucketOperator): create_bucket_raw> on 2023-04-25 00:00:00+00:00
+[2023-04-26T19:43:26.536+0000] {standard_task_runner.py:55} INFO - Started process 3136 to run task
+[2023-04-26T19:43:26.542+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'create_bucket_raw', 'scheduled__2023-04-25T00:00:00+00:00', '--job-id', '392', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmp9lvqemqe']
+[2023-04-26T19:43:26.554+0000] {standard_task_runner.py:83} INFO - Job 392: Subtask create_bucket_raw
+[2023-04-26T19:43:26.782+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.create_bucket_raw scheduled__2023-04-25T00:00:00+00:00 [running]> on host b592efbffeab
+[2023-04-26T19:43:27.049+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=create_bucket_raw
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-25T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=15
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-25T00:00:00+00:00
+[2023-04-26T19:43:27.076+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-04-26T19:43:27.149+0000] {gcs.py:880} INFO - Creating Bucket: bucket_raw_jr; Location: us-central1; Storage Class: STANDARD
+[2023-04-26T19:43:30.799+0000] {gcs.py:161} WARNING - Bucket bucket_raw_jr already exists
+[2023-04-26T19:43:30.831+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=gsc_to_bq, task_id=create_bucket_raw, execution_date=20230425T000000, start_date=20230426T194326, end_date=20230426T194330
+[2023-04-26T19:43:30.875+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-04-26T19:43:30.934+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

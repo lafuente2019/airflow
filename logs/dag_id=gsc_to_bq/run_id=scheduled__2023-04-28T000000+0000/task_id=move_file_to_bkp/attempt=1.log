@@ -1,0 +1,28 @@
+[2023-04-29T00:00:13.688+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.move_file_to_bkp scheduled__2023-04-28T00:00:00+00:00 [queued]>
+[2023-04-29T00:00:13.709+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.move_file_to_bkp scheduled__2023-04-28T00:00:00+00:00 [queued]>
+[2023-04-29T00:00:13.709+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-29T00:00:13.712+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-04-29T00:00:13.713+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-29T00:00:13.737+0000] {taskinstance.py:1300} INFO - Executing <Task(GCSToGCSOperator): move_file_to_bkp> on 2023-04-28 00:00:00+00:00
+[2023-04-29T00:00:13.746+0000] {standard_task_runner.py:55} INFO - Started process 7323 to run task
+[2023-04-29T00:00:13.754+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'move_file_to_bkp', 'scheduled__2023-04-28T00:00:00+00:00', '--job-id', '474', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmphi_wcwxi']
+[2023-04-29T00:00:13.758+0000] {standard_task_runner.py:83} INFO - Job 474: Subtask move_file_to_bkp
+[2023-04-29T00:00:14.017+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.move_file_to_bkp scheduled__2023-04-28T00:00:00+00:00 [running]> on host 32f6cac2461e
+[2023-04-29T00:00:14.178+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=move_file_to_bkp
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-28T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-28T00:00:00+00:00
+[2023-04-29T00:00:14.196+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-04-29T00:00:14.208+0000] {gcs_to_gcs.py:403} INFO - Delimiter ignored because wildcard is in prefix
+[2023-04-29T00:00:14.996+0000] {gcs_to_gcs.py:470} INFO - Executing copy of gs://bucket_raw_jr/input/Base_Unificada__resultado.csv to gs://bucket_raw_jr/backup/Base_Unificada__resultado.csv
+[2023-04-29T00:00:15.433+0000] {gcs.py:248} INFO - Total Bytes: 67026833 | Bytes Written: 67026833
+[2023-04-29T00:00:15.434+0000] {gcs.py:261} INFO - Object input/Base_Unificada__resultado.csv in bucket bucket_raw_jr rewritten to object backup/Base_Unificada__resultado.csv in bucket bucket_raw_jr
+[2023-04-29T00:00:15.653+0000] {gcs.py:664} INFO - Blob input/Base_Unificada__resultado.csv deleted.
+[2023-04-29T00:00:15.698+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=gsc_to_bq, task_id=move_file_to_bkp, execution_date=20230428T000000, start_date=20230429T000013, end_date=20230429T000015
+[2023-04-29T00:00:15.776+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-04-29T00:00:15.827+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

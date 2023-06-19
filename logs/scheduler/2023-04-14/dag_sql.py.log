@@ -1,0 +1,98 @@
+[2023-04-14T00:00:28.951+0000] {processor.py:153} INFO - Started process (PID=12477) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:00:28.987+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:00:29.015+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:00:29.014+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:00:30.005+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:00:30.223+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:00:30.222+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:00:30.519+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:00:30.518+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:00:30.691+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 1.787 seconds
+[2023-04-14T00:01:01.176+0000] {processor.py:153} INFO - Started process (PID=12505) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:01:01.179+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:01:01.185+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:01:01.181+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:01:01.698+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:01:01.861+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:01:01.860+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:01:02.149+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:01:02.148+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:01:02.316+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 1.157 seconds
+[2023-04-14T00:01:33.240+0000] {processor.py:153} INFO - Started process (PID=12531) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:01:33.244+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:01:33.247+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:01:33.246+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:01:33.536+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:01:33.611+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:01:33.611+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:01:33.716+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:01:33.716+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:01:33.806+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 0.582 seconds
+[2023-04-14T00:02:04.112+0000] {processor.py:153} INFO - Started process (PID=12565) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:02:04.116+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:02:04.123+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:02:04.122+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:02:04.643+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:02:04.766+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:02:04.765+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:02:04.919+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:02:04.918+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:02:05.135+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 1.043 seconds
+[2023-04-14T00:02:36.154+0000] {processor.py:153} INFO - Started process (PID=12583) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:02:36.158+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:02:36.164+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:02:36.163+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:02:36.515+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:02:36.625+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:02:36.625+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:02:36.703+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:02:36.703+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:02:36.772+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 0.635 seconds
+[2023-04-14T00:03:07.552+0000] {processor.py:153} INFO - Started process (PID=12618) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:03:07.555+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:03:07.560+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:03:07.559+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:03:07.910+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:03:08.005+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:03:08.005+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:03:08.145+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:03:08.142+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:03:08.247+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 0.712 seconds
+[2023-04-14T00:03:38.802+0000] {processor.py:153} INFO - Started process (PID=12647) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:03:38.805+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:03:38.811+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:03:38.810+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:03:39.213+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:03:39.308+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:03:39.307+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:03:39.404+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:03:39.403+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:03:39.482+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 0.697 seconds
+[2023-04-14T00:04:10.472+0000] {processor.py:153} INFO - Started process (PID=12673) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:04:10.475+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:04:10.479+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:04:10.478+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:04:10.914+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:04:11.003+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:04:11.003+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:04:11.085+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:04:11.085+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:04:11.155+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 0.700 seconds
+[2023-04-14T00:04:42.071+0000] {processor.py:153} INFO - Started process (PID=12708) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:04:42.083+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:04:42.088+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:04:42.087+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:04:42.606+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:04:42.727+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:04:42.727+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:04:42.923+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:04:42.922+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:04:43.060+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 1.010 seconds
+[2023-04-14T00:05:13.846+0000] {processor.py:153} INFO - Started process (PID=12736) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:05:13.850+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:05:13.852+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:05:13.852+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:05:14.157+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:05:14.256+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:05:14.256+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:05:14.377+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:05:14.376+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:05:14.471+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 0.645 seconds
+[2023-04-14T00:05:45.535+0000] {processor.py:153} INFO - Started process (PID=12762) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:05:45.539+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:05:45.543+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:05:45.542+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:05:45.920+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:05:46.039+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:05:46.038+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:05:46.136+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:05:46.136+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:05:46.202+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 0.682 seconds
+[2023-04-14T00:06:16.360+0000] {processor.py:153} INFO - Started process (PID=12798) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:06:16.371+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:06:16.375+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:06:16.374+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:06:16.775+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:06:16.850+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:06:16.850+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:06:16.971+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:06:16.970+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:06:17.070+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 0.726 seconds
+[2023-04-14T00:06:47.604+0000] {processor.py:153} INFO - Started process (PID=12824) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:06:47.607+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:06:47.609+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:06:47.609+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:06:48.009+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:06:48.104+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:06:48.103+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:06:48.268+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:06:48.268+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:06:48.391+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 0.804 seconds
+[2023-04-14T00:07:18.859+0000] {processor.py:153} INFO - Started process (PID=12852) to work on /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:07:18.865+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_sql.py for tasks to queue
+[2023-04-14T00:07:18.869+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:07:18.868+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:07:19.161+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_sql']) retrieved from /opt/airflow/dags/dag_sql.py
+[2023-04-14T00:07:19.316+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:07:19.315+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-04-14T00:07:19.442+0000] {logging_mixin.py:137} INFO - [2023-04-14T00:07:19.441+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_sql to 2023-04-13T22:30:00+00:00, run_after=2023-04-13T23:30:00+00:00
+[2023-04-14T00:07:19.533+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_sql.py took 0.696 seconds

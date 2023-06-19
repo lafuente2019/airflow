@@ -1,0 +1,23 @@
+[2023-03-05T01:29:54.142+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: teste_dag.captura_dados scheduled__2023-03-04T23:30:00+00:00 [queued]>
+[2023-03-05T01:29:54.155+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: teste_dag.captura_dados scheduled__2023-03-04T23:30:00+00:00 [queued]>
+[2023-03-05T01:29:54.156+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-05T01:29:54.170+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2023-03-05T01:29:54.171+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-05T01:29:54.188+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): captura_dados> on 2023-03-04 23:30:00+00:00
+[2023-03-05T01:29:54.194+0000] {standard_task_runner.py:55} INFO - Started process 281 to run task
+[2023-03-05T01:29:54.197+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'teste_dag', 'captura_dados', 'scheduled__2023-03-04T23:30:00+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/teste_dag.py', '--cfg-path', '/tmp/tmpo4rpz77s']
+[2023-03-05T01:29:54.197+0000] {standard_task_runner.py:83} INFO - Job 25: Subtask captura_dados
+[2023-03-05T01:29:54.270+0000] {task_command.py:388} INFO - Running <TaskInstance: teste_dag.captura_dados scheduled__2023-03-04T23:30:00+00:00 [running]> on host 3d4e7c789958
+[2023-03-05T01:29:54.354+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=teste_dag
+AIRFLOW_CTX_TASK_ID=captura_dados
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-04T23:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-04T23:30:00+00:00
+[2023-03-05T01:29:57.022+0000] {python.py:177} INFO - Done. Returned value was: 1000
+[2023-03-05T01:29:57.055+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=teste_dag, task_id=captura_dados, execution_date=20230304T233000, start_date=20230305T012954, end_date=20230305T012957
+[2023-03-05T01:29:57.123+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-05T01:29:57.170+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

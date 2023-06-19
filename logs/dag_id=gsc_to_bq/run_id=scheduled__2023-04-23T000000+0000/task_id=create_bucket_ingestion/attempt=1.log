@@ -1,0 +1,48 @@
+[2023-04-26T18:00:43.539+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.create_bucket_ingestion scheduled__2023-04-23T00:00:00+00:00 [queued]>
+[2023-04-26T18:00:43.664+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.create_bucket_ingestion scheduled__2023-04-23T00:00:00+00:00 [queued]>
+[2023-04-26T18:00:43.683+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T18:00:43.856+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-04-26T18:00:43.873+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T18:00:44.328+0000] {taskinstance.py:1300} INFO - Executing <Task(GCSCreateBucketOperator): create_bucket_ingestion> on 2023-04-23 00:00:00+00:00
+[2023-04-26T18:00:44.794+0000] {standard_task_runner.py:55} INFO - Started process 142 to run task
+[2023-04-26T18:00:44.900+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'create_bucket_ingestion', 'scheduled__2023-04-23T00:00:00+00:00', '--job-id', '336', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmp1pc2lt5k']
+[2023-04-26T18:00:45.018+0000] {standard_task_runner.py:83} INFO - Job 336: Subtask create_bucket_ingestion
+[2023-04-26T18:00:48.352+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.create_bucket_ingestion scheduled__2023-04-23T00:00:00+00:00 [running]> on host ec729a0ad77f
+[2023-04-26T18:00:56.267+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=create_bucket_ingestion
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-23T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-23T00:00:00+00:00
+[2023-04-26T18:00:56.545+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-04-26T18:00:56.874+0000] {gcs.py:880} INFO - Creating Bucket: bucket_ingestion; Location: us-central1; Storage Class: STANDARD
+[2023-04-26T18:01:05.673+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/gcs.py", line 158, in execute
+    labels=self.labels,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 462, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/gcs.py", line 897, in create_bucket
+    bucket.create(project=project_id, location=location)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/bucket.py", line 989, in create
+    retry=retry,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/client.py", line 954, in create_bucket
+    _target_object=bucket,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/client.py", line 620, in _post_resource
+    _target_object=_target_object,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/_http.py", line 72, in api_request
+    return call()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 288, in retry_wrapped_func
+    on_error=on_error,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.Forbidden: 403 POST https://storage.googleapis.com/storage/v1/b?project=my-project-id&prettyPrint=false: gcs-to-bq@semiotic-joy-379201.iam.gserviceaccount.com does not have storage.buckets.create access to the Google Cloud project. Permission 'storage.buckets.create' denied on resource (or it may not exist).
+[2023-04-26T18:01:05.970+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=gsc_to_bq, task_id=create_bucket_ingestion, execution_date=20230423T000000, start_date=20230426T180043, end_date=20230426T180105
+[2023-04-26T18:01:06.431+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 336 for task create_bucket_ingestion (403 POST https://storage.googleapis.com/storage/v1/b?project=my-project-id&prettyPrint=false: gcs-to-bq@semiotic-joy-379201.iam.gserviceaccount.com does not have storage.buckets.create access to the Google Cloud project. Permission 'storage.buckets.create' denied on resource (or it may not exist).; 142)
+[2023-04-26T18:01:06.821+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-04-26T18:01:07.375+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

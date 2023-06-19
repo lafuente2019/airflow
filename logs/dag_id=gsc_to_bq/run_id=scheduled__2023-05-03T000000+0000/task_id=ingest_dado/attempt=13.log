@@ -1,0 +1,32 @@
+[2023-05-04T14:22:18.376+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04T14:22:18.387+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-03T00:00:00+00:00 [queued]>
+[2023-05-04T14:22:18.388+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04T14:22:18.389+0000] {taskinstance.py:1280} INFO - Starting attempt 13 of 13
+[2023-05-04T14:22:18.389+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04T14:22:18.407+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): ingest_dado> on 2023-05-03 00:00:00+00:00
+[2023-05-04T14:22:18.412+0000] {standard_task_runner.py:55} INFO - Started process 1502 to run task
+[2023-05-04T14:22:18.416+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'ingest_dado', 'scheduled__2023-05-03T00:00:00+00:00', '--job-id', '746', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmpkc6k9ilv']
+[2023-05-04T14:22:18.418+0000] {standard_task_runner.py:83} INFO - Job 746: Subtask ingest_dado
+[2023-05-04T14:22:18.487+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-03T00:00:00+00:00 [running]> on host 1630dcf67789
+[2023-05-04T14:22:18.560+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=ingest_dado
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=13
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-03T00:00:00+00:00
+[2023-05-04T14:22:19.124+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/gcs_to_bq.py", line 30, in ingest_dados
+    import openpyxl
+ModuleNotFoundError: No module named 'openpyxl'
+[2023-05-04T14:22:19.151+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=gsc_to_bq, task_id=ingest_dado, execution_date=20230503T000000, start_date=20230504T142218, end_date=20230504T142219
+[2023-05-04T14:22:19.172+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 746 for task ingest_dado (No module named 'openpyxl'; 1502)
+[2023-05-04T14:22:19.230+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-05-04T14:22:19.256+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,55 @@
+[2023-05-03T23:31:58.328+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [queued]>
+[2023-05-03T23:31:58.345+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [queued]>
+[2023-05-03T23:31:58.346+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T23:31:58.350+0000] {taskinstance.py:1280} INFO - Starting attempt 76 of 77
+[2023-05-03T23:31:58.350+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T23:31:58.373+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): ingest_dado> on 2023-05-02 00:00:00+00:00
+[2023-05-03T23:31:58.381+0000] {standard_task_runner.py:55} INFO - Started process 5684 to run task
+[2023-05-03T23:31:58.388+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'ingest_dado', 'scheduled__2023-05-02T00:00:00+00:00', '--job-id', '715', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmpi_4escl1']
+[2023-05-03T23:31:58.392+0000] {standard_task_runner.py:83} INFO - Job 715: Subtask ingest_dado
+[2023-05-03T23:31:58.506+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.ingest_dado scheduled__2023-05-02T00:00:00+00:00 [running]> on host 23a1495f3fb6
+[2023-05-03T23:31:58.671+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=ingest_dado
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=76
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-02T00:00:00+00:00
+[2023-05-03T23:31:59.365+0000] {logging_mixin.py:137} INFO - /opt/***/arq/gcsToBq.json
+[2023-05-03T23:31:59.422+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/gcs_to_bq.py", line 33, in ingest_dados
+    df = pd.read_json(keyfile)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 207, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/json/_json.py", line 614, in read_json
+    return json_reader.read()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/json/_json.py", line 748, in read
+    obj = self._get_object_parser(self.data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/json/_json.py", line 770, in _get_object_parser
+    obj = FrameParser(json, **kwargs).parse()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/json/_json.py", line 885, in parse
+    self._parse_no_numpy()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/json/_json.py", line 1140, in _parse_no_numpy
+    loads(json, precise_float=self.precise_float), dtype=None
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 614, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 465, in dict_to_mgr
+    arrays, data_names, index, columns, dtype=dtype, typ=typ, consolidate=copy
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 119, in arrays_to_mgr
+    index = _extract_index(arrays)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 625, in _extract_index
+    raise ValueError("If using all scalar values, you must pass an index")
+ValueError: If using all scalar values, you must pass an index
+[2023-05-03T23:31:59.478+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=gsc_to_bq, task_id=ingest_dado, execution_date=20230502T000000, start_date=20230503T233158, end_date=20230503T233159
+[2023-05-03T23:31:59.521+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 715 for task ingest_dado (If using all scalar values, you must pass an index; 5684)
+[2023-05-03T23:31:59.575+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-05-03T23:31:59.607+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

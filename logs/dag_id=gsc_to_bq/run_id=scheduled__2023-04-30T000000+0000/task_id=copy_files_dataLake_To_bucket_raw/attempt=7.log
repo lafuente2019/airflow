@@ -1,0 +1,21 @@
+[2023-05-01T02:08:27.562+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.copy_files_dataLake_To_bucket_raw scheduled__2023-04-30T00:00:00+00:00 [queued]>
+[2023-05-01T02:08:27.576+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: gsc_to_bq.copy_files_dataLake_To_bucket_raw scheduled__2023-04-30T00:00:00+00:00 [queued]>
+[2023-05-01T02:08:27.577+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-01T02:08:27.581+0000] {taskinstance.py:1280} INFO - Starting attempt 7 of 8
+[2023-05-01T02:08:27.581+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-01T02:08:27.607+0000] {taskinstance.py:1300} INFO - Executing <Task(GCSToGCSOperator): copy_files_dataLake_To_bucket_raw> on 2023-04-30 00:00:00+00:00
+[2023-05-01T02:08:27.615+0000] {standard_task_runner.py:55} INFO - Started process 137 to run task
+[2023-05-01T02:08:27.620+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'gsc_to_bq', 'copy_files_dataLake_To_bucket_raw', 'scheduled__2023-04-30T00:00:00+00:00', '--job-id', '511', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq.py', '--cfg-path', '/tmp/tmpk7s0zsv7']
+[2023-05-01T02:08:27.624+0000] {standard_task_runner.py:83} INFO - Job 511: Subtask copy_files_dataLake_To_bucket_raw
+[2023-05-01T02:08:27.751+0000] {task_command.py:388} INFO - Running <TaskInstance: gsc_to_bq.copy_files_dataLake_To_bucket_raw scheduled__2023-04-30T00:00:00+00:00 [running]> on host da959356c36a
+[2023-05-01T02:08:27.886+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=gsc_to_bq
+AIRFLOW_CTX_TASK_ID=copy_files_dataLake_To_bucket_raw
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-30T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=7
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-30T00:00:00+00:00
+[2023-05-01T02:08:27.906+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-05-01T02:08:27.919+0000] {gcs_to_gcs.py:403} INFO - Delimiter ignored because wildcard is in prefix

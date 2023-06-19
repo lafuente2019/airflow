@@ -1,0 +1,26 @@
+[2023-03-05T00:41:44.869+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: teste_dag.e_valido scheduled__2023-03-04T22:30:00+00:00 [queued]>
+[2023-03-05T00:41:44.878+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: teste_dag.e_valido scheduled__2023-03-04T22:30:00+00:00 [queued]>
+[2023-03-05T00:41:44.879+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-05T00:41:44.879+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2023-03-05T00:41:44.880+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-05T00:41:44.893+0000] {taskinstance.py:1300} INFO - Executing <Task(BranchPythonOperator): e_valido> on 2023-03-04 22:30:00+00:00
+[2023-03-05T00:41:44.898+0000] {standard_task_runner.py:55} INFO - Started process 7039 to run task
+[2023-03-05T00:41:44.900+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'teste_dag', 'e_valido', 'scheduled__2023-03-04T22:30:00+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/teste_dag.py', '--cfg-path', '/tmp/tmpmmo7db0h']
+[2023-03-05T00:41:44.901+0000] {standard_task_runner.py:83} INFO - Job 21: Subtask e_valido
+[2023-03-05T00:41:44.961+0000] {task_command.py:388} INFO - Running <TaskInstance: teste_dag.e_valido scheduled__2023-03-04T22:30:00+00:00 [running]> on host 3d4e7c789958
+[2023-03-05T00:41:45.026+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=teste_dag
+AIRFLOW_CTX_TASK_ID=e_valido
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-04T22:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-04T22:30:00+00:00
+[2023-03-05T00:41:45.041+0000] {python.py:177} INFO - Done. Returned value was: nvalido
+[2023-03-05T00:41:45.041+0000] {python.py:211} INFO - Branch callable return nvalido
+[2023-03-05T00:41:45.042+0000] {skipmixin.py:155} INFO - Following branch nvalido
+[2023-03-05T00:41:45.042+0000] {skipmixin.py:211} INFO - Skipping tasks ['valido']
+[2023-03-05T00:41:45.085+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=teste_dag, task_id=e_valido, execution_date=20230304T223000, start_date=20230305T004144, end_date=20230305T004145
+[2023-03-05T00:41:45.111+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-05T00:41:45.133+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

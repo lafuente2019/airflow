@@ -1,0 +1,36 @@
+[2023-06-06T21:24:00.187+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: create_infra.create_bucket_raw scheduled__2023-06-05T00:00:00+00:00 [queued]>
+[2023-06-06T21:24:00.226+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: create_infra.create_bucket_raw scheduled__2023-06-05T00:00:00+00:00 [queued]>
+[2023-06-06T21:24:00.227+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-06T21:24:00.258+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-06-06T21:24:00.274+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-06T21:24:00.483+0000] {taskinstance.py:1300} INFO - Executing <Task(GCSCreateBucketOperator): create_bucket_raw> on 2023-06-05 00:00:00+00:00
+[2023-06-06T21:24:00.495+0000] {standard_task_runner.py:55} INFO - Started process 340 to run task
+[2023-06-06T21:24:00.508+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'create_infra', 'create_bucket_raw', 'scheduled__2023-06-05T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/create_infra.py', '--cfg-path', '/tmp/tmp8pf5qnsb']
+[2023-06-06T21:24:00.516+0000] {standard_task_runner.py:83} INFO - Job 3: Subtask create_bucket_raw
+[2023-06-06T21:24:00.741+0000] {task_command.py:388} INFO - Running <TaskInstance: create_infra.create_bucket_raw scheduled__2023-06-05T00:00:00+00:00 [running]> on host d33a653d73b2
+[2023-06-06T21:24:01.049+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=create_infra
+AIRFLOW_CTX_TASK_ID=create_bucket_raw
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-05T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-06-05T00:00:00+00:00
+[2023-06-06T21:24:01.109+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/gcs.py", line 143, in execute
+    impersonation_chain=self.impersonation_chain,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/gcs.py", line 150, in __init__
+    impersonation_chain=impersonation_chain,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 231, in __init__
+    self.extras: dict = self.get_connection(self.gcp_conn_id).extra_dejson
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 72, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 435, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `gcp` isn't defined
+[2023-06-06T21:24:01.136+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=create_infra, task_id=create_bucket_raw, execution_date=20230605T000000, start_date=20230606T212400, end_date=20230606T212401
+[2023-06-06T21:24:01.259+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 3 for task create_bucket_raw (The conn_id `gcp` isn't defined; 340)
+[2023-06-06T21:24:01.331+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-06-06T21:24:01.477+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,64 @@
+[2023-05-03T01:56:40.303+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: create_infra.create_table_bq scheduled__2023-05-02T00:00:00+00:00 [queued]>
+[2023-05-03T01:56:40.392+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: create_infra.create_table_bq scheduled__2023-05-02T00:00:00+00:00 [queued]>
+[2023-05-03T01:56:40.421+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T01:56:40.422+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2023-05-03T01:56:40.434+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T01:56:40.600+0000] {taskinstance.py:1300} INFO - Executing <Task(BigQueryExecuteQueryOperator): create_table_bq> on 2023-05-02 00:00:00+00:00
+[2023-05-03T01:56:40.702+0000] {standard_task_runner.py:55} INFO - Started process 12223 to run task
+[2023-05-03T01:56:40.740+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'create_infra', 'create_table_bq', 'scheduled__2023-05-02T00:00:00+00:00', '--job-id', '586', '--raw', '--subdir', 'DAGS_FOLDER/create_infra.py', '--cfg-path', '/tmp/tmpa1la50i7']
+[2023-05-03T01:56:40.751+0000] {standard_task_runner.py:83} INFO - Job 586: Subtask create_table_bq
+[2023-05-03T01:56:41.134+0000] {task_command.py:388} INFO - Running <TaskInstance: create_infra.create_table_bq scheduled__2023-05-02T00:00:00+00:00 [running]> on host da959356c36a
+[2023-05-03T01:56:41.693+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Junior Lafuente
+AIRFLOW_CTX_DAG_ID=create_infra
+AIRFLOW_CTX_TASK_ID=create_table_bq
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-02T00:00:00+00:00
+[2023-05-03T01:56:41.702+0000] {bigquery.py:1077} INFO - Executing: create table if not exists venda.tb_vendas(
+    ID_MARCA integer,
+    MARCA string,
+    ID_LINHA integer,
+    LINHA string,
+    DATA_VENDA date,
+    QTD_VENDA integer
+)
+PARTITION BY dt_venda;
+[2023-05-03T01:56:41.782+0000] {base.py:73} INFO - Using connection ID 'gcp' for task execution.
+[2023-05-03T01:56:41.841+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/providers/google/cloud/hooks/bigquery.py:2051: DeprecationWarning: This method is deprecated. Please use `BigQueryHook.insert_job` method.
+  "This method is deprecated. Please use `BigQueryHook.insert_job` method.", DeprecationWarning
+
+[2023-05-03T01:56:42.083+0000] {bigquery.py:1542} INFO - Inserting job ***_1683079002075466_5d26fa011caf427aaf02e0151568cfc1
+[2023-05-03T01:56:44.210+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 1103, in execute
+    encryption_configuration=self.encryption_configuration,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 2185, in run_query
+    job = self.insert_job(configuration=configuration, project_id=self.project_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 462, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 1548, in insert_job
+    job.result(timeout=timeout, retry=retry)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 1499, in result
+    do_get_result()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 1489, in do_get_result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/base.py", line 728, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 137, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Unrecognized name: dt_venda at [9:14]
+
+Location: US
+Job ID: airflow_1683079002075466_5d26fa011caf427aaf02e0151568cfc1
+
+[2023-05-03T01:56:44.333+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=create_infra, task_id=create_table_bq, execution_date=20230502T000000, start_date=20230503T015640, end_date=20230503T015644
+[2023-05-03T01:56:44.483+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 586 for task create_table_bq (400 Unrecognized name: dt_venda at [9:14]
+
+Location: US
+Job ID: airflow_1683079002075466_5d26fa011caf427aaf02e0151568cfc1
+; 12223)
+[2023-05-03T01:56:44.592+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-05-03T01:56:44.863+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

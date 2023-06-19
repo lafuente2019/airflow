@@ -1,14 +1,3 @@
-# [StART documentation]
-# create new bucket - bucket_raw_jr [GCSCreateBucketOperator]
-# sync files from raw-zone to ingesting-zone [GCSSynchronizeBucketsOperator] 
-# list objects on the ingesting-zone [GCSListObjectsOperator]
-# create dataset on bigquery [BigQueryCrateEmptyDatasetOperator]
-# ingest data from gcs to bigquery [GCSToBigQueryOperator]
-# delete bucket junior-lafuente [GCSDeleteBucketOperator]
-# senha postgres: airflow
-# [END documentation]
-
-
 from airflow import DAG
 from datetime import datetime, timedelta
 from airflow.providers.google.cloud.operators.gcs import GCSCreateBucketOperator

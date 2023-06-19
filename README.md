@@ -1,4 +1,4 @@
-# StART Documentation
+# START Documentation
 
 Este código implementa um fluxo de trabalho no Apache Airflow para criar infraestrutura de armazenamento e tabelas no Google Cloud Platform. O fluxo de trabalho consiste nos seguintes passos:
 

@@ -1,29 +1,37 @@
-Fluxo de Trabalho para Criação de Infraestrutura no GCP
-Este repositório contém um código que implementa um fluxo de trabalho no Apache Airflow para criar infraestrutura de armazenamento e tabelas no Google Cloud Platform (GCP). O objetivo desse fluxo é automatizar a criação dos recursos necessários para processar e armazenar dados no GCP.
+# StART Documentation
 
-Passos do Fluxo de Trabalho
-O fluxo de trabalho consiste nos seguintes passos:
+Este código implementa um fluxo de trabalho no Apache Airflow para criar infraestrutura de armazenamento e tabelas no Google Cloud Platform. O fluxo de trabalho consiste nos seguintes passos:
 
-Criação de um Bucket no Cloud Storage: Utiliza o operador GCSCreateBucketOperator para criar um novo bucket no Cloud Storage, que será usado para armazenar os arquivos de entrada e saída do processo. O bucket é criado com o nome "bucket_raw_jr" e a classe de armazenamento padrão.
+1. Criação de um novo bucket no Cloud Storage - `bucket_raw_jr` - utilizando o operador `GCSCreateBucketOperator`.
+2. Sincronização de arquivos da zona raw para a zona de ingestão no Cloud Storage utilizando o operador `GCSSynchronizeBucketsOperator`.
+3. Listagem de objetos na zona de ingestão do Cloud Storage utilizando o operador `GCSListObjectsOperator`.
+4. Criação de um dataset vazio no BigQuery utilizando o operador `BigQueryCreateEmptyDatasetOperator`.
+5. Ingestão de dados do Cloud Storage para o BigQuery utilizando o operador `GCSToBigQueryOperator`.
+6. Exclusão do bucket `junior-lafuente` utilizando o operador `GCSDeleteBucketOperator`.
 
-Criação de um Dataset no BigQuery: Utiliza o operador BigQueryCreateEmptyDatasetOperator para criar um novo dataset no BigQuery, que será usado para armazenar as tabelas. O dataset é criado com o nome "venda" no projeto "semiotic-joy-379201".
+### Configuração
 
-Criação de uma Tabela no BigQuery: Utiliza o operador BigQueryCreateEmptyTableOperator para criar uma nova tabela no BigQuery. A tabela é criada dentro do dataset "venda" e possui o nome "tb_vendas". Além disso, são definidos os campos e seus tipos: "ID_MARCA" (INTEGER), "MARCA" (STRING), "ID_LINHA" (INTEGER), "LINHA" (STRING), "DATA_VENDA" (DATE) e "QTD_VENDA" (INTEGER).
+Certifique-se de ter as seguintes informações configuradas corretamente:
 
-Configuração
-Antes de executar o código, verifique se as seguintes informações estão configuradas corretamente:
+- `project_id`: ID do projeto no Google Cloud Platform.
+- `region`: Região onde o bucket será criado.
+- `bucket_name_raw`: Nome do bucket a ser criado no Cloud Storage para armazenar os arquivos de entrada e saída.
+- `dataset_name`: Nome do dataset a ser criado no BigQuery.
+- `tabela_name`: Nome da tabela a ser criada no BigQuery.
+- `bucket_name_datalake`: Nome do bucket a ser sincronizado na zona de ingestão.
 
-project_id: ID do projeto no Google Cloud Platform. No exemplo, o ID do projeto é definido como "semiotic-joy-379201".
-region: Região onde o bucket será criado. No exemplo, a região é definida como "us-central1".
-bucket_name_raw: Nome do bucket a ser criado no Cloud Storage para armazenar os arquivos de entrada e saída. No exemplo, o nome do bucket é definido como "bucket_raw_jr".
-dataset_name: Nome do dataset a ser criado no BigQuery. No exemplo, o nome do dataset é definido como "venda".
-tabela_name: Nome da tabela a ser criada no BigQuery. No exemplo, o nome da tabela é definido como "tb_vendas".
-DAG (Directed Acyclic Graph)
-O fluxo de trabalho é definido como uma DAG chamada "create_infra". A DAG é configurada com os seguintes parâmetros:
+### DAG
 
-default_args: Configurações padrão para as tarefas da DAG.
-start_date: Data de início da DAG. No exemplo, a data de início é definida como 10 de maio de 2023.
-schedule_interval: Frequência de execução da DAG. No exemplo, a DAG está programada para ser executada diariamente.
-catchup: Define se a DAG deve executar tarefas em atraso. No exemplo, o valor é definido como False.
-O fluxo da DAG é o seguinte:
+A DAG (Directed Acyclic Graph) `create_infra` é criada com as seguintes configurações:
+
+- `default_args`: Configurações padrão para as tarefas da DAG.
+- `start_date`: Data de início da DAG.
+- `schedule_interval`: Frequência de execução da DAG.
+
+O fluxo do DAG é o seguinte:
+
 create_bucket_raw >> create_dataset >> create_table_bq
+
+Certifique-se de que as dependências e as configurações do ambiente, como conexão com o Google Cloud Platform, estejam corretamente configuradas antes de executar a DAG.
+
+[END Documentation]

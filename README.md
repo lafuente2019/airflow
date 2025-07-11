@@ -126,8 +126,5 @@ O fluxo será acionado automaticamente pelo schedule_interval definido.
 📬 Contato
 Caso tenha dúvidas, sugestões ou queira contribuir, entre em contato pelo e-mail:
 
-css
-Copiar
-Editar
 valterlafuentejunior@gmail.com
 🚀 Projeto desenvolvido para facilitar pipelines de dados usando o Airflow em conjunto com GCP e PostgreSQL.
